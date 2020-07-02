@@ -13,6 +13,9 @@ title: CS7641 Project 8
 
 navbar-links:
   Data Preprocessing: "Data Preprocessing"
+  Unsupervised Learning: "Unsupervised Learning"
+  Supervised Learning: "Supervised Learning"
+  Conclusion: "Conclusion"
   Resources:
     - Beautiful Jekyll: "https://beautifuljekyll.com"
     - Learn markdown: "https://www.markdowntutorial.com/"
