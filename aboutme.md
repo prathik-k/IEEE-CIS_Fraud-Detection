@@ -1,7 +1,7 @@
 ---
 layout: page
-title: About me
-subtitle: Why you'd want to go on a date with me
+title: Data Preprocessing
+subtitle: Data Feature Engineering, Data Warehousing, Data Cleaning
 ---
 
 My name is Inigo Montoya. I have the following qualities:
