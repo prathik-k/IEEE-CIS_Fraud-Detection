@@ -12,6 +12,7 @@ title: CS7641 Project 8 (Summer 2020)
 # --- List of links in the navigation bar --- #
 
 navbar-links:
+  Dataset Overview: "Dataset Overview"
   Data Preprocessing: "Data Preprocessing"
   Unsupervised Learning: "Unsupervised Learning"
   Supervised Learning: "Supervised Learning"
