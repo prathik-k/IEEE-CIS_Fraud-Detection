@@ -35,7 +35,7 @@ Table 1: Overview of the ID dataset
   </tr>
 </table>
 
-
+&#10;
 Table 2: Overview of the Transaction dataset
 
 <table style="width:100%">
