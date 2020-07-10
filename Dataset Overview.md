@@ -36,30 +36,62 @@ Table 1: Overview of the ID dataset
 </table>
 
 
-
-
-Table 1: Overview of the ID dataset
-<div class="datatable-begin"></div>
-
-Feature(s) Name | Categorical/String/Numeric? (C/S/N) | Description
------------- | :------------- | :-------------
-DeviceType | C | Type of device used for transaction
-DeviceInfo | C | Additional metadata about device
-id12-id38 | C & N | Identifying features of buyer/seller (IP,browser, etc.)
-
-<div class="datatable-end"></div>
-
 Table 2: Overview of the Transaction dataset
 
-Feature(s) Name | Categorical/String/Numeric? (C/S/N) | Description
------------- | :------------- | :-------------
-TransactionDT | N | Timedelta of transaction from a certain instant
-TransactionAMT | N | Amount of transaction
-ProductCD | C | Product code of transaction
-card1 - card6 | C | Provide information about the type of card used for the transaction
-addr1-2 | S | Addresses of buyer and receiver
-P_, R_ | S | email addresses of buyer and receiver
-C1-C14 | N | Additional metadata for the card information
-D1-D15 | N | Datetime metadata
-M1-M9 | C | Match features (such as the name on card, etc.)
-Vxx | N | Vesta engineered features - unknown/undisclosed implication of each column
+<table style="width:100%">
+  <tr>
+    <th>Feature(s) Name</th>
+    <th>Categorical/String/Numeric? (C/S/N)</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>TransactionDT</td>
+    <td>N</td>
+    <td>Timedelta of transaction from a certain instant</td>
+  </tr>
+  <tr>
+    <td>TransactionAMT</td>
+    <td>N</td>
+    <td>Amount of transaction</td>
+  </tr>
+  <tr>
+    <td>ProductCD</td>
+    <td>C</td>
+    <td>Product code of transaction</td>
+  </tr>
+  <tr>
+    <td>card1 - card6</td>
+    <td>C</td>
+    <td>Provide information about the type of card used for the transaction</td>
+  </tr>
+  <tr>
+    <td>addr1-2</td>
+    <td>S</td>
+    <td>Addresses of buyer and receiver</td>
+  </tr>  
+  <tr>
+    <td>P_, R_</td>
+    <td>S</td>
+    <td>email addresses of buyer and receiver</td>
+  </tr>
+  <tr>
+    <td>C1-C14</td>
+    <td>N</td>
+    <td>Additional metadata for the card information</td>
+  </tr>
+  <tr>
+    <td>D1-D15</td>
+    <td>N</td>
+    <td>Datetime metadata</td>
+  </tr>
+  <tr>
+    <td>M1-M9</td>
+    <td>C</td>
+    <td>Match features (such as the name on card, etc.)</td>
+  </tr>
+  <tr>
+    <td>Vxx</td>
+    <td>N</td>
+    <td>Vesta engineered features - unknown/undisclosed implication of each column</td>
+  </tr>  
+</table>
