@@ -93,5 +93,16 @@ Table 2: Overview of the Transaction dataset
     <td>Vxx</td>
     <td>N</td>
     <td>Vesta engineered features - unknown/undisclosed implication of each column</td>
-  </tr>  
+  </tr>
+  <tr>
+    <td>isFraud</td>
+    <td>C</td>
+    <td>Whether the transaction is genuine or fraudulent not (0 or 1) - Only present in training dataset</td>
+  </tr>
+  
 </table>
+
+**2. Objective**  
+<p style="text-align: justify;">
+The objective of the problem is to predict a probability for a transaction in the test dataset of being fraudulent (a value between 0 or 1). The submission is evaluated in terms of area under the ROC curve between the predicted value and observed target.
+</p>
