@@ -12,10 +12,11 @@ There are two separate categories of data in the data: the id and transaction da
 
 Table 1: Overview of the ID dataset
 
-Feature(s) Name | Categorical or Numeric? | Description
+Feature(s) Name | Categorical/String/Numeric? (C/S/N) | Description
 ------------ | -------------
-Content from cell 1 | Content from cell 2 | C3
-Content in the first column | Content in the second column | C4
+DeviceType | C | Type of device used for transaction
+DeviceInfo | C | Additional metadata about device
+id12-id38 | C & N | Identifying features of buyer/seller (IP,browser, etc.)
 
 
 Table 2: Overview of the Transaction dataset
