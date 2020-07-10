@@ -17,10 +17,11 @@ Feature(s) Name | Categorical or Numeric? | Description
 Content from cell 1 | Content from cell 2 | C3
 Content in the first column | Content in the second column | C4
 
+
 Table 2: Overview of the Transaction dataset
 
 Feature(s) Name | Categorical/String/Numeric? (C/S/N) | Description
------------- | -------------
+------------ | ------------- | -------------
 TransactionDT | N | Timedelta of transaction from a certain instant
 TransactionAMT | N | Amount of transaction
 ProductCD | C | Product code of transaction
