@@ -11,12 +11,15 @@ According to Consumer Sentinel Network Data Book 2019 from the Federal Trade Com
 There are two separate categories of data in the data: the id and transaction datasets. The ID dataset consists of identification information (such as the device on which the purchase was made, Operating System used, etc.), while the transaction dataset consists of the information directly tied to the transaction (such as the type of credit card used, billing address, transaction amount, etc.). Each of these additionally have train and test versions respectively. An interesting aspect to this dataset is the presence of certain abstract engineered features. A detailed overview of the features found in each table is shown below:
 
 Table 1: Overview of the ID dataset
+<div class="datatable-begin"></div>
 
 Feature(s) Name | Categorical/String/Numeric? (C/S/N) | Description
+------------ | :------------- | :-------------
 DeviceType | C | Type of device used for transaction
 DeviceInfo | C | Additional metadata about device
 id12-id38 | C & N | Identifying features of buyer/seller (IP,browser, etc.)
 
+<div class="datatable-end"></div>
 
 Table 2: Overview of the Transaction dataset
 
