@@ -109,7 +109,7 @@ Table 2: Overview of the Transaction dataset
  <b>Class Imbalance</b> 
  As with typical credit card transaction data, the number of genuine transactions far outnumbers the fraudulent transaction rate (majority of which are performed by a few bad actors). In this dataset, we observe that only about 3.5% of the training data is classified as fraudulent (shown in Fig. 1.).
 
-![Img](assets/img/Fraudulent_genuine.jpg)
+![Img](assets/img/Fraudulent_genuine.PNG)
  Fig. 1. Disparity between fraudulent and genuine data
 
 </p>
