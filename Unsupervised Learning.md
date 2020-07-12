@@ -30,6 +30,8 @@ Fig. 2.Correlation heat map for the features V12 to V34 (One of the groups)
 <b>2. Principal Component Analysis of the V columns</b>
   <br>
   The V components form the majority of the features in the transaction data. As such, applying a suitable dimensionality reduction scheme to capture the variance in the V columns is a good step in reducing model complexity, overfitting and interpretability. PCA is a suitable dimensionality reduction technique that provides an orthogonal linear transformation of the features to project the high-dimensional data onto a set of uncorrelated axes (called principle components). The transformed data are ordered in decreasing order of variance captured, so that the subset of selected features maximize the variance in the representation. 
+  </p>
+<p style="text-align: justify;">
   We decided to apply PCA to only individual groups of features (such as the D features, V features, etc.) independently, instead of the entire dataset as a whole. This is because the different classes of features could be either categorical or numeric (i.e. different types of data) and also had very different scales. Moreover, only the PCA on the V data appeared to be useful in reducing dimensionality while maintaining a similar level of performance; when applied to the other categories of features, the performance of the model drastically worsened. Fig. 3. Shows the scree plot of the PCA on the V columns. As can be seen, the first few components do not account for much of the variance (in fact, ~50 components are needed to capture 99% of the variance in the V columns). This is in line with expectations for a complicated dataset as in this case; as such, plotting the first 3 PCs did not yield much separation between the classes of data (genuine and fraudulent transactions).
 </p>
 
@@ -37,5 +39,11 @@ Fig. 2.Correlation heat map for the features V12 to V34 (One of the groups)
 
 Fig. 3. Scree plot of PCA on V.
 
+
+<p style="text-align: justify;">
+
+<b>SMOTE Oversampling of the dataset to overcome imbalance</b>
+<br>
+Since most of the supervised learning methods we used were tree-based, they performed well on the classification task in spite of the huge discrepancy in quantity of data for the genuine and fraudulent categories. However, we attempted to compare our methods with another form of classification (logistic regression) to ascertain the effectiveness of alternative methods. To prepare the data for this, we decided to use SMOTE (Synthetic Minority Oversampling TEchnique) followed by random undersampling of the genuine data. SMOTE draws a line between random points (that are amongst k-Nearest Neighbors of each other) in the minority class in the high dimensinal space, and artificially synthesizes data points along this line. After applying SMOTE to the minority class to achieve a class ratio of 0.2, we used random undersampling on the genuine data to reduce the number of datapoints to the original number. We recognize that this undersampling could involve discarding some useful data points; however, it was necessary to make the dataset less unwieldy and run the logistic regression in a computationally efficient way.
 <b>References</b>
 [1] https://www.kaggle.com/cdeotte/eda-for-columns-v-and-id
