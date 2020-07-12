@@ -15,11 +15,13 @@ The unsupervised learning section for this project is an extension of the data p
 
 <!-- <p align="center"> -->
 
-![Img](assets/img/piechart_V_corr_red.jpg)
-
-Fig. 1. Distribution of NaN values in the transaction dataset.
 <!-- </p> -->
 
 </p>
+
+![Img](assets/img/piechart_V_corr_red.jpg)
+
+Fig. 1. Distribution of NaN values in the transaction dataset.
+
 
 
