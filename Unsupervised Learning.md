@@ -13,12 +13,12 @@ The unsupervised learning section for this project is an extension of the data p
   <b>Method</b>
   Our preliminary EDA indicated a potential way of clustering columns in the transaction dataset by matching the row with missing information (NaN). It appeared that certain columns contained uniform amounts of missing data; these rows were further found to be matching amongst all the columns within the same data cluster. The results of this clustering (based on number of NaNs found in the column) is shown in Fig. 1.
 
-<p align="center">
+<!-- <p align="center"> -->
 
 ![Img](assets/img/piechart_V_corr_red.JPG)
 
 Fig. 1. Distribution of NaN values in the transaction dataset.
-</p>
+<!-- </p> -->
 
 </p>
 
