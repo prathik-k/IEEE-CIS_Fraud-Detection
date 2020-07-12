@@ -60,5 +60,7 @@ Fig. 4. SMOTE on a low-dimensional dataset. [2]
 
 <b>References</b>
 <br>
+
 [1] https://www.kaggle.com/cdeotte/eda-for-columns-v-and-id
+
 [2] https://rikunert.com/SMOTE_explained
