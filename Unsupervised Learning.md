@@ -11,7 +11,7 @@ The unsupervised learning section for this project is an extension of the data p
 <p style="text-align: justify;">
   <b>1. Reduction of the number of components in transaction data with correlation metrics</b>
   <br>
-Our preliminary EDA indicated a potential way of clustering columns in the transaction dataset by matching the row with missing information (NaN). It appeared that certain columns contained uniform amounts of missing data; these rows were further found to be matching amongst all the columns within the same data cluster. The results of this clustering (based on number of NaNs found in the column) is shown in Fig. 1.
+Our preliminary Exploratory Data Analysis (EDA) indicated a potential way of clustering columns in the transaction dataset by matching the row with missing information (NaN). It appeared that certain columns contained uniform amounts of missing data; these rows were further found to be matching amongst all the columns within the same data cluster. The results of this clustering (based on number of NaNs found in the column) is shown in Fig. 1.
 </p>
 
 ![Img](/assets/img/piechart_V_corr_red.JPG)
@@ -42,7 +42,7 @@ Fig. 3. Scree plot of PCA on V.
 
 <p style="text-align: justify;">
 
-<b>SMOTE Oversampling of the dataset to overcome imbalance</b>
+<b>3. SMOTE Oversampling of the dataset to overcome imbalance</b>
 <br>
 Since most of the supervised learning methods we used were tree-based, they performed well on the classification task in spite of the huge discrepancy in quantity of data for the genuine and fraudulent categories. However, we attempted to compare our methods with another form of classification (logistic regression) to ascertain the effectiveness of alternative methods. To prepare the data for this, we decided to use SMOTE (Synthetic Minority Oversampling TEchnique) followed by random undersampling of the genuine data. SMOTE draws a line between random points (that are amongst k-Nearest Neighbors of each other) in the minority class in the high dimensinal space, and artificially synthesizes data points along this line. After applying SMOTE to the minority class to achieve a class ratio of 0.2, we used random undersampling on the genuine data to reduce the number of datapoints to the original number. We recognize that this undersampling could involve discarding some useful data points; however, it was necessary to make the dataset less unwieldy and run the logistic regression in a computationally efficient way. Fig. 4. illustrates the SMOTE procedure for a lower-dimensional case; the same concept may be extended to the higher dimensional case.
 </p>
