@@ -19,8 +19,20 @@ The unsupervised learning section for this project is an extension of the data p
 Fig. 1. Distribution of NaN values in the transaction dataset.
 
 <p style="text-align: justify;">
-  After grouping the columns together in this way, a correlation analysis on the groups of features was performed, and for each group, the columns were organized into subgroups such that all columns in each subgroup had a correlation >0.8 with each other. Further, a single representative column (the one with the largest variance) was chosen as representative from this subgroup. A sample correlation plot for one of the groupings is shown in Fig. 2.  
+  After grouping the columns together in this way, a correlation analysis on the groups of features was performed, and for each group, the columns were organized into subgroups such that all columns in each subgroup had a correlation >0.8 with each other. Further, a single representative column (the one with the largest variance) was chosen as representative from this subgroup. A sample correlation plot for one of the groupings is shown in Fig. 2. This analysis is similar to the work of Chris Deotte [1] 
 </p>
 
 ![Img](/assets/img/V12-V34_sample_corrplot.jpg)
 
+Fig. 2.Correlation heat map for the features V12 to V34 (One of the groups)
+
+<p style="text-align: justify;">
+<b>2. Principal Component Analysis of the V columns</b>
+  The V components form the majority of the features in the transaction data. As such, applying a suitable dimensionality reduction scheme to capture the variance in the V columns is a good step in reducing model complexity, overfitting and interpretability. Moreover, we decided to apply PCA to only groups of features (such as the D features, V features, etc.) independently, instead of the entire dataset as a whole. This is because the different classes of features could be either categorical or numeric (i.e. different types of data) and also had very different scales. Fig. 3. Shows the scree plot of the PCA on the V columns. As can be seen, the first few components do not account for much of the variance (in fact, ~50 components are needed to capture 99% of the variance in the V columns). This is in line with expectations for a complicated dataset as in this case; as such, plotting the first 3 PCs did not yield much separation between the classes of data (genuine and fraudulent transactions).
+</p>
+
+![Img](/assets/img/V_pca.jpg)
+
+Fig. 3. Scree plot of PCA on V.
+
+[1] https://www.kaggle.com/cdeotte/eda-for-columns-v-and-id
