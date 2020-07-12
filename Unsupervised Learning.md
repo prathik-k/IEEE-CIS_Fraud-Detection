@@ -19,7 +19,7 @@ The unsupervised learning section for this project is an extension of the data p
 
 </p>
 
-![Img](assets/img/piechart_V_corr_red.jpg)
+![Img](/assets/img/piechart_V_corr_red.JPG)
 
 Fig. 1. Distribution of NaN values in the transaction dataset.
 
