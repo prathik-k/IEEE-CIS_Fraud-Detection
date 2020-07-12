@@ -16,7 +16,9 @@ Our preliminary Exploratory Data Analysis (EDA) indicated a potential way of clu
 
 ![Img](/assets/img/piechart_V_corr_red.JPG)
 
+<center>
 Fig. 1. Distribution of NaN values in the transaction dataset.
+</center>
 
 <p style="text-align: justify;">
   After grouping the columns together in this way, a correlation analysis on the groups of features was performed, and for each group, the columns were organized into subgroups such that all columns in each subgroup had a correlation >0.8 with each other. Further, a single representative column (the one with the largest variance) was chosen as representative from this subgroup. A sample correlation plot for one of the groupings is shown in Fig. 2. This analysis is similar to the work of Chris Deotte [1] 
@@ -24,7 +26,9 @@ Fig. 1. Distribution of NaN values in the transaction dataset.
 
 ![Img](/assets/img/V12-V34_sample_corrplot.jpg)
 
+<center>
 Fig. 2.Correlation heat map for the features V12 to V34 (One of the groups)
+</center>
 
 <p style="text-align: justify;">
 <b>2. Principal Component Analysis of the V columns</b>
@@ -37,8 +41,9 @@ Fig. 2.Correlation heat map for the features V12 to V34 (One of the groups)
 
 ![Img](/assets/img/V_pca.jpg)
 
+<center>
 Fig. 3. Scree plot of PCA on V.
-
+</center>
 
 <p style="text-align: justify;">
 
@@ -49,7 +54,9 @@ Since most of the supervised learning methods we used were tree-based, they perf
 
 ![Img](/assets/img/SMOTE_sample.jpg)
 
+<center>
 Fig. 4. SMOTE on a low-dimensional dataset. [2]
+</center>
 
 <b>References</b>
 <br>
