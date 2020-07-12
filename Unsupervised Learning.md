@@ -20,7 +20,7 @@ Fig. 1. Distribution of NaN values in the transaction dataset.
 
 <p style="text-align: justify;">
   After grouping the columns together in this way, a correlation analysis on the groups of features was performed, and for each group, the columns were organized into subgroups such that all columns in each subgroup had a correlation >0.8 with each other. Further, a single representative column (the one with the largest variance) was chosen as representative from this subgroup. A sample correlation plot for one of the groupings is shown in Fig. 2.  
-<\p>
+</p>
 
 ![Img](/assets/img/V12-V34_sample_corrplot.jpg)
 
