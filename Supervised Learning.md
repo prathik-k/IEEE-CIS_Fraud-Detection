@@ -25,7 +25,7 @@ MathJax.Hub.Queue(function() {
 
 
 <p style="text-align: justify;">
-For this project, we attempted a variety of supervised classification methods that are well suited to binary classification problems with severe class imbalance. In this section, we describe some background theory, our approaches and results obtained from this step.
+For this project, we attempted a variety of supervised classification methods that are well suited to binary classification problems with severe class imbalance. In this section, we describe some background theory, our approaches and results obtained from this step. This is the result: $x^2$
 </p>
 
 <p style="text-align: justify;">
