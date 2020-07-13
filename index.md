@@ -1,7 +1,8 @@
 ---
 layout: home
-title: Fraud Detection
-subtitle: Need more description
+title: A Machine Learning Based Credit Card Fraud Detection System
+subtitle: Chen-Yang Liu, Divyanshu Upreti, Jamin Seo, Prathik Kaundinya and Yuan-Chun Luo
+
 ---
 <p style="text-align: justify;">
  <b>Introduction </b> 
