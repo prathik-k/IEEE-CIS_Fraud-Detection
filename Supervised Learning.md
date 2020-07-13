@@ -70,14 +70,56 @@ LightGBM is another gradient boosting tree based supervised learning method. Lig
 <li>Reduce memory usage</li>
 <li>Reduce communication cost for parallel learning</li>
 </ul>
+LightGBM supports various hyper-parameters. Table 1 lists some of the important ones and the values we used:
+<table style="width:100%">
+  <tr>
+    <th>Parameter Name</th>
+    <th>Description</th>
+    <th>Value</th>
+  </tr>
+  <tr>
+    <td>num_leaves</td>
+    <td>Number of leaves in the full tree</td>
+    <td>256</td>
+  </tr>
+  <tr>
+    <td>objective</td>
+    <td>We chose Binary as this is a classification problem</td>
+    <td>binary</td>
+  </tr>
+  <tr>
+    <td>max_depth</td>
+    <td>Max depth of the tree. Used to control overfitting</td>
+    <td>13</td>
+  </tr>
+  <tr>
+    <td>min_child_samples</td>
+    <td>Minimum number of data points needed in a child (leaf) node. This is a very important parameter to prevent overfitting.</td>
+    <td>79</td>
+  </tr>
+  <tr>
+    <td>boosting_type</td>
+    <td>We chose gradient boosting</td>
+    <td>gbdt</td>
+  </tr>
+  <tr>
+    <td>subsample_freq</td>
+    <td>This specifies that bagging should be performed after every k iterations</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>metric</td>
+    <td>Cost penalty for a prediction. We chose the area under the curve metric</td>
+    <td>auc</td>
+  </tr>
+</table>
+<center>Table 1: LightGBM Hyper-parameters</center>
 
 <p style="text-align: justify;">
   <b>Approach and Results</b>
 </p>
- We attempted these supervised learning methods on two cases of data - 1) the preprocessed data following the previous steps, and 2) PCA implmeneted to this preprocessed data. Moreover, the SMOTE oversampled data was used for the logistic regression case to obtain a more balanced training set.. After training each model, we let the model produce prediction of the test data and recorded their score through kaggle submission. The hyper-parameters were manually and lightly tuned with Grid Search and 5-fold cross validation to obtain moderate test scores. To plot the ROC curves, a hard train-validation split was performed on to yield an 80-20 split. The following table shows the final results after we evaluated the models when trained on the complete set of training data.
+ We attempted these supervised learning methods on two cases of data - 1) the preprocessed data following the previous steps, and 2) PCA implmeneted to this preprocessed data. Moreover, the SMOTE oversampled data was used for the logistic regression case to obtain a more balanced training set.. After training each model, we let the model produce prediction of the test data and recorded their score through kaggle submission. The hyper-parameters were manually and lightly tuned with Grid Search and 5-fold cross validation to obtain moderate test scores. To plot the ROC curves, a hard train-validation split was performed on to yield an 80-20 split. Table 2 shows the final results after we evaluated the models when trained on the complete set of training data.
  
-Table 1: Result from each model
-
 <table style="width:100%">
   <tr>
     <th>Model(s) Name</th>
@@ -126,6 +168,8 @@ Table 1: Result from each model
     sparse_threshold=1.0</td>
   </tr>
 </table>
+
+<center>Table 2: Result from each model</center>
 
 <p style="text-align: justify;">
   <b>AUC-ROC curves</b>
