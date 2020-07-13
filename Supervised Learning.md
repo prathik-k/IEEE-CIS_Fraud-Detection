@@ -74,3 +74,6 @@ Table 1: Result from each model
 <p style="text-align: justify;">
   <b>AUC-ROC curves</b>
 </p>
+
+![Img](/assets/img/Logistic_Regression.png)
+
