@@ -11,7 +11,7 @@ Overall, we achieved good performance with our tree-based models. Out of the thr
   <ul>
     <li>The oversampling procedure was accompanied by undersampling - this meant throwing away useful data, and consequently less real data points for the model to learn from.
      <li> Logistic regression performs optimally on datasets with fully independent features. Naturally, as evidenced by the unsupervised learning (with the correlation based clustering and PCA), we see that full independence between features in the dataset has not been achieved. This drastically reduced the predictive capability of the model.
-     <li> Assuming the specific functional form (as constrained by the governing equation of logistic regression) may not always provide an optimal solution, as was seen in this case.
+     <li> Assuming the specific functional form (as constrained by the governing equation of logistic regression) may not always provide an optimal solution, as was seen in this case. </li>
    </ul>
 
 <b>2. Deployment of Model </b>
