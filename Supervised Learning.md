@@ -79,4 +79,6 @@ Table 1: Result from each model
 </p>
 
 ![Img](/assets/img/Logistic_Regression.png)
+![Img](/assets/img/LightGBM.png)
+![Img](/assets/img/LightGBM_with_PCA.png)
 
