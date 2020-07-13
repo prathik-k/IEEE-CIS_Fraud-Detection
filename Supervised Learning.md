@@ -35,9 +35,12 @@ For this project, we attempted a variety of supervised classification methods th
 Logistic regression is a binary classification algorithm that is used to model the probability of a data point belonging to a class. The equation for logistic regression that models this probability is given by: <br>
 $$p(X) = \frac{e^{\beta_{0}+\beta_{1}X}}{1+e^{\beta_{0}+\beta_{1}X}}$$
 
-where the standard logistic regression model was used along with SMOTE oversampling which is described in the previous section.
-
+where $\beta_{0}$ and $\beta{1}$ are constants that need to be computed. This function is also referred to as the sigmoid function - a sample plot of the sigmoid function is shown in Fig. 1. In this project, the standard logistic regression model was used along with SMOTE oversampling which is described in the previous section.
 </p>
+
+![Img](/assets/img/sigmoid.png)
+Fig. 1. The sigmoid curve. Note that the classification procedure yields a probability between 0 and 1.
+
 <p style="text-align: justify;">
   <b>2. Random Forest Classification</b>
 </p>
