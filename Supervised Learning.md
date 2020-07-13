@@ -12,13 +12,11 @@ For this project, we attempted a variety of supervised classification methods th
   <b>1. Logistic Model</b>
 </p>
 The standard logistic regression model was used along with SMOTE oversampling which is described in the previous senction.
-</p>
 
 <p style="text-align: justify;">
   <b>2. Random Forest Classification</b>
 </p>
 Random forest is a classical tree-based ensemble learning method that constructs multiple individual decision trees in order to evaluate a class assignment of a data point. The prediction is made at the end of the multiple trees, by majority voting their results.
-</p>
 
 <p style="text-align: justify;">
   <b>3. XGBoost Classifier</b>
@@ -29,7 +27,6 @@ XGBoost is a tree-based ensemble learning framework that implements gradient boo
 <li>weighted quantile sketch procedure for approximate tree learning</li>
 <li>out-of-core computation to effectively process data</li>
 </ul>
-</p>
 
 <p style="text-align: justify;">
   <b>4. LightGBM Classifier</b>
@@ -40,7 +37,6 @@ LightGBM is another gradient boosting tree based supervised learning method. Lig
 <li>Reduce memory usage</li>
 <li>Reduce communication cost for parallel learning</li>
 </ul>
-</p>
 
 <p style="text-align: justify;">
   <b>Approach and Results</b>
@@ -70,8 +66,8 @@ Table 1: Result from each model
   </tr>
   <tr>
     <td>XGBoost Classifier</td>
-    <td>0.928964</td>
-    <td>0.921232</td>
+    <td>0.928550</td>
+    <td>0.917584</td>
     <td>n_estimators=250,
         max_depth=15,
         learning_rate=0.05,
@@ -81,8 +77,8 @@ Table 1: Result from each model
   </tr>
   <tr>
     <td>LightGBM Classifier</td>
-    <td>0.928964</td>
-    <td>0.921232</td>
+    <td>0.925995</td>
+    <td>0.922701</td>
     <td>max_bin = 63,
     num_leaves = 255,
     num_iterations = 500,
