@@ -89,12 +89,12 @@ Fig. 6. MDS embedding on transaction features.
 </center>
 
 <br>
-In Fig. 6, We observe that the two clusters show very different shapes. The distribution of non-fraud cluster is circular, surrounding the the (0,0} point, while the fraud cluster concentrates at the lower-right corner.
+In Fig. 6, We observe that the two clusters show very different shapes. The distribution of non-fraud cluster is circular, surrounding the the (0,0} point, while the fraud cluster concentrates at the lower-right corner. It is noted that the transaction dataset is a reduced form with the first 20000 data points only.
 </p>
 
 <b>6. Spectral embedding on Transaction Features </b>
 <br>
-Spectral embedding us for non-linear dimensionality reduction. It forms a specified function and applies spectral decomposition to the corresponding graph laplacian. The resultant values are the eigenvectors for each data point.
+Spectral embedding is for non-linear dimensionality reduction. It forms a specified function and applies spectral decomposition to the corresponding graph laplacian. The resultant values are the eigenvectors for each data point.
 </p>
 
 ![Img](/assets/img/spectral_embedding_notfraud.png)
@@ -106,7 +106,22 @@ Fig. 7. Spectral embedding on transaction features.
 </center>
 
 <br>
-In Fig. 7, unfortunately, the two clusters show similar shapes on the first two components. This is probably due to the weak spectral meaning in the transaction data.
+In Fig. 7, unfortunately, the two clusters show similar shapes on the first two components. This is probably due to the weak spectral meaning in the transaction data. It is noted that the transaction dataset here is of a reduced form with the first 20000 data points only.
+</p>
+
+<b>7. 3D Visualization of PCA </b>
+<br>
+Although the first few components of the PCA transformation do not account for a large portion of variation, we are still interested in how good the first three components are able to separate the two clusters.
+</p>
+
+![Img](/assets/img/3D_PCA.png)
+
+<center>
+Fig. 8. 3D visualization of PCA. 
+</center>
+
+<br>
+In Fig. 8, the two clusters are still overlapped much. However, we can observe that the fraud cluster is more concentrated and somehow forms a line in the 3D plot, where as the non-fraud cluster scatters all over the space.
 </p>
 
 <b>References</b>
