@@ -59,7 +59,7 @@ Fig. 4. SMOTE on a low-dimensional dataset. [2]
 </center>
 
 <b>4. TSNE on Time Features</b>
-<p>
+<br>
 T-distributed stochastic neighbor embedding (TSNE) is a method to visualize high-dimensional data. Time features are D columns and there are 14 features which is hard to understand their relationship between Fraud and NotFraud classes. Therefore, our team utilized TSNE to better understand low dimensional data representation. What's more, our team would like to know whether to find two clusters seperating two classes easily.
 </p>
 
@@ -71,7 +71,7 @@ T-distributed stochastic neighbor embedding (TSNE) is a method to visualize high
 Fig. 4. TSNE on a time features dataset. 
 </center>
 
-<p>
+<br>
 Based on two figures above, the two classes are not easily seperated, but the NotFraud class concentrate on the left side and the isFraud class evenly spread. Therefore, if we decided use first dimenstion as our decision line, that might be x = 400 which we would think there is a higher chance that this example is Fraud.
 </p>
 
@@ -82,4 +82,3 @@ Based on two figures above, the two classes are not easily seperated, but the No
 
 [2] https://rikunert.com/SMOTE_explained
 
-</br>
