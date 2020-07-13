@@ -5,7 +5,7 @@ subtitle: PCA, SMOTE, TSNE
 ---
 
 <p style="text-align: justify;">
-The unsupervised learning section for this project is an extension of the data preprocessing step. Given the extremely high dimension of the input data (~370 columns) and the large class imbalance, the unsupervised techniques of dimensionality reduction/data rebalancing appears essential. Three major techniques were investigated for this section - reduction based on correlation analysis, PCA and SMOTE oversampling (for the logistic regression section). The largest collection of features in the transaction dataset is the set of Vesta engineered Vxx features; as such, our dimensionality reduction efforts were focused predominantly on this set of data.
+The unsupervised learning section for this project is an extension of the data preprocessing step. Given the extremely high dimension of the input data (~370 columns) and the large class imbalance, the unsupervised techniques of dimensionality reduction/data rebalancing appears essential. Three major techniques were investigated for this section - reduction based on correlation analysis, PCA and SMOTE oversampling (for the logistic regression section). The largest collection of features in the transaction dataset is the set of Vesta engineered Vxx features; as such, our dimensionality reduction efforts were focused predominantly on this set of data. We also performed t-SNE on the time features (the TransactionDT information) to ascertain whether there is a relationship between the time of transaction and a higher/lower probability of it being fraudulent.
 </p>
 
 <p style="text-align: justify;">
@@ -72,7 +72,7 @@ Fig. 4. TSNE on a time features dataset.
 </center>
 
 <br>
-Based on two figures above, the two classes are not easily seperated, but the NotFraud class concentrate on the left side and the isFraud class evenly spread. Therefore, if we decided use first dimenstion as our decision line, that might be x = 400 which we would think there is a higher chance that this example is Fraud.
+Based on two figures above, the two classes are not easily seperated, but the NotFraud class concentrate on the left side and the isFraud class evenly spread. This shows that the fraudulent transactions are more well spread out. Therefore, if we decided use first dimenstion as our decision line, the boundary may be selected as x = 400 beyond which there is a higher chance that the transaction is fraudulent.
 </p>
 
 <b>References</b>
