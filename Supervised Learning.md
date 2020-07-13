@@ -10,11 +10,13 @@ For this project, we attempted a variety of supervised classification methods th
 
 <p style="text-align: justify;">
   <b>1. Logistic Model</b>
+</p>
 The standard logistic regression model was used along with SMOTE oversampling which is described in the previous senction.
 </p>
 
 <p style="text-align: justify;">
   <b>2. Random Forest Classification</b>
+</p>
 Random forest is a classical tree-based ensemble learning method that constructs multiple individual decision trees in order to evaluate a class assignment of a data point.
 </p>
 
@@ -22,11 +24,11 @@ Random forest is a classical tree-based ensemble learning method that constructs
   <b>3. XGBoost Classifier</b>
 </p>
 XGBoost is a tree-based ensemble learning framework that implements gradient boosting method. Gradient boosting is a machine learning technique for regression and classification problems, which produces a prediction model in the form of an ensemble of weak prediction models, typically decision trees.
-
 </p>
 
 <p style="text-align: justify;">
   <b>4. LightGBM Classifier</b>
+</p>
 LightGBM is another gradient boosting tree based supervised learning method. LightGBM uses histogram-based algorithms, which bucket continuous feature (attribute) values into discrete bins. This speeds up training and reduces memory usage, even compared to XGBoost. Advantages of histogram-based algorithms include the following:
 <ul>
 <li>Reduced cost at each split</li>
