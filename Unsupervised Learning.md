@@ -72,11 +72,13 @@ Fig. 5. TSNE on a time features dataset.
 </center>
 
 <br>
+<p>
 Based on two figures above, the two classes are not easily seperated, but the isFraud class concentrate on the left side and the NonFraud class evenly spread. This shows that the fraudulent transactions are more well spread out. Therefore, if we decided use first dimenstion as our decision line, the boundary may be selected as x = 400 beyond which there is a higher chance that the transaction is not fraudulent.
 </p>
 
 <b>5. MDS Embedding on Transaction Features</b>
 <br>
+<p>
 Multidimensional scaling (MDS) is often applied to visualize the level of similarity between cases in a given dataset. Transaction data consist of more than 300 features. It is almost impossible to use two vectors to fully distinguish the clusters for fraud and non-fraud cases. Our goal is to see if the patterns of the fraud and non-fraud clusters show different shapes after MDS, where they are projected onto the first two principles components.
 </p>
 
@@ -89,11 +91,13 @@ Fig. 6. MDS embedding on transaction features.
 </center>
 
 <br>
+<p>
 In Fig. 6, We observe that the two clusters show very different shapes. The distribution of non-fraud cluster is circular, surrounding the the (0,0} point, while the fraud cluster concentrates at (0,0), the lower-right corner. It is noted that the transaction dataset is a reduced form with the first 20000 data points.
 </p>
 
 <b>6. Spectral embedding on Transaction Features </b>
 <br>
+<p>
 Spectral embedding is for non-linear dimensionality reduction. It forms a specified function and applies spectral decomposition to the corresponding graph laplacian. The resultant values are the eigenvectors for each data point.
 </p>
 
@@ -106,6 +110,7 @@ Fig. 7. Spectral embedding on transaction features.
 </center>
 
 <br>
+<p>
 In Fig. 7, unfortunately, the two clusters show similar shapes on the first two components. This is probably due to the weak spectral meaning in the transaction data. It is noted that the transaction dataset here is of a reduced form with the first 20000 data points.
 </p>
 
@@ -121,6 +126,7 @@ Fig. 8. 3D visualization of PCA.
 </center>
 
 <br>
+<p>
 In Fig. 8, the orange points are the fraud cluster and the blue ones are the non-fraud cluster. Although the two clusters are still overlapped much, we can still observe that the fraud cluster is more concentrated and somehow forms a line in the 3D plot, where as the non-fraud cluster scatters all over the space.
 </p>
 
