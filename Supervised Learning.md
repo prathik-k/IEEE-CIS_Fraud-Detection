@@ -70,3 +70,7 @@ Table 1: Result from each model
     <td>0.921232</td>
   </tr>
 </table>
+
+<p style="text-align: justify;">
+  <b>AUC-ROC curves</b>
+</p>
