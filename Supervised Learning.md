@@ -17,13 +17,18 @@ The standard logistic regression model was used along with SMOTE oversampling wh
 <p style="text-align: justify;">
   <b>2. Random Forest Classification</b>
 </p>
-Random forest is a classical tree-based ensemble learning method that constructs multiple individual decision trees in order to evaluate a class assignment of a data point.
+Random forest is a classical tree-based ensemble learning method that constructs multiple individual decision trees in order to evaluate a class assignment of a data point. The prediction is made at the end of the multiple trees, either by majority voting (for classification) or averaging their results (for regression).
 </p>
 
 <p style="text-align: justify;">
   <b>3. XGBoost Classifier</b>
 </p>
-XGBoost is a tree-based ensemble learning framework that implements gradient boosting method. Gradient boosting is a machine learning technique for regression and classification problems, which produces a prediction model in the form of an ensemble of weak prediction models, typically decision trees.
+XGBoost is a tree-based ensemble learning framework that implements gradient boosting method. Gradient boosting is a machine learning technique for regression and classification problems, which produces a prediction model in the form of an ensemble of weak prediction models, typically decision trees. Following are the features that XGBoost differ from other tree-boosting algorithms:
+<ul>
+<li>novel tree learning algorithm that handles sparse data</li>
+<li>weighted quantile sketch procedure for approximate tree learning</li>
+<li>out-of-core computation to effectively process data</li>
+</ul>
 </p>
 
 <p style="text-align: justify;">
@@ -98,3 +103,11 @@ Table 1: Result from each model
 ![Img](/assets/img/LightGBM_with_PCA.png)
 ![Img](/assets/img/XGBoost.png)
 ![Img](/assets/img/XGBoost_with_PCA.png)
+
+
+<b>References</b>
+<br>
+
+[1] Tianqi Chen and Carlos Guestrin. Xgboost: A scalable tree boosting system. In Proceedings of the 22Nd ACM SIGKDD International
+Conference on Knowledge Discovery and Data Mining, pages 785–794. ACM, 2016.
+
