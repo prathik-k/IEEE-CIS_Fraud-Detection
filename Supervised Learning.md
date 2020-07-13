@@ -22,4 +22,5 @@ Random forest is a classical tree-based ensemble learning method that constructs
 
 <p style="text-align: justify;">
   <b>4. LightGBM Classifier</b>
+LightGBM is a gradient boosting tree based supervised learning method. Gradient boosting is a machine learning technique for regression and classification problems, which produces a prediction model in the form of an ensemble of weak prediction models, typically decision trees. When we used the LightGBM classifier on our PCA analysed data we were able to get a score of 0.92 on the kaggle leaderboard.
 </p>
