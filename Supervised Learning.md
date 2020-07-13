@@ -3,7 +3,24 @@ layout: page
 title: Supervised Learning
 subtitle: LightGBM, Random Forest, XGBoost
 ---
-
+<style TYPE="text/css">
+code.has-jax {font: inherit; font-size: 100%; background: inherit; border: inherit;}
+</style>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'] // removed 'code' entry
+    }
+});
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_HTML-full"></script>
 
 
 
@@ -14,8 +31,9 @@ For this project, we attempted a variety of supervised classification methods th
 <p style="text-align: justify;">
   <b>1. Logistic Model</b>
 </p>
-Logistic regression is a binary classification algorithm that is used to model the probability of a data point belonging to a class. The equation for logistic regression that models this probability is given by: <br>
+Logistic regression is a binary classification algorithm that is used to model the probability of a data point belonging to a class. The equation for logistic regression that models this probability is given by: <br> <br>
 <a href="https://www.codecogs.com/eqnedit.php?latex=p(X)&space;=&space;\frac{e^{\beta_{0}&plus;\beta_{1}X}}{1&plus;e^{\beta_{0}&plus;\beta_{1}X}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?p(X)&space;=&space;\frac{e^{\beta_{0}&plus;\beta_{1}X}}{1&plus;e^{\beta_{0}&plus;\beta_{1}X}}" title="p(X) = \frac{e^{\beta_{0}+\beta_{1}X}}{1+e^{\beta_{0}+\beta_{1}X}}" /></a> <br>
+where 
 The standard logistic regression model was used along with SMOTE oversampling which is described in the previous section.
 
 
