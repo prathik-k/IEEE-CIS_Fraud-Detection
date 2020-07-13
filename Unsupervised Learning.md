@@ -65,7 +65,6 @@ T-distributed stochastic neighbor embedding (TSNE) is a method to visualize high
 
 ![Img](/assets/img/TSNEFraud.png)
 
-
 ![Img](/assets/img/TSNENotFraud.png)
 
 <center>
