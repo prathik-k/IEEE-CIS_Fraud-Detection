@@ -26,7 +26,7 @@ MathJax.Hub.Queue(function() {
 
 
 <p style="text-align: justify;">
-For this project, we attempted a variety of supervised classification methods that are well suited to binary classification problems with severe class imbalance. In this section, we describe some background theory, our approaches and results obtained from this step.
+For this project, we attempted a variety of supervised classification methods that are well suited to binary classification problems with severe class imbalance. In this section, we describe some background theory, our approaches and results obtained from this step. The Scikit-Learn implementation was used for logistic regression and random forest classification, while XGBoost and LightGBM have full-support Python libraries.
 </p>
 
 <p style="text-align: justify;">
@@ -35,7 +35,7 @@ For this project, we attempted a variety of supervised classification methods th
 Logistic regression is a binary classification algorithm that is used to model the probability of a data point belonging to a class. The equation for logistic regression that models this probability is given by: <br>
 $$p(X) = \frac{e^{\beta_{0}+\beta_{1}X}}{1+e^{\beta_{0}+\beta_{1}X}}$$
 
-where $\beta_{0}$ and $\beta{1}$ are constants that need to be computed. This function is also referred to as the sigmoid function - a sample plot of the sigmoid function is shown in Fig. 1. In this project, the standard logistic regression model was used along with SMOTE oversampling which is described in the previous section.
+where $\beta_{0}$ and $\beta_{1}$ are constants that need to be computed. This function is also referred to as the sigmoid function - a sample plot of the sigmoid function is shown in Fig. 1. In this project, the standard logistic regression model was used along with SMOTE oversampling which is described in the previous section.
 </p>
 
 ![Img](/assets/img/sigmoid.png) 
@@ -45,7 +45,12 @@ Fig. 1. The sigmoid curve. Note that the classification procedure yields a proba
 <p style="text-align: justify;">
   <b>2. Random Forest Classification</b>
 </p>
-Random forest is a classical tree-based ensemble learning method that constructs multiple individual decision trees in order to evaluate a class assignment of a data point. The prediction is made at the end of the multiple trees, by majority voting their results.
+Random forest is a classical tree-based ensemble learning method that constructs multiple individual decision trees in order to evaluate a class assignment of a data point. The prediction is made at the end of the multiple trees, by majority voting of their results. As in traditional decision trees, an information criterion is used to make splits in a tree. In our implementation, we used the Gini impurity criterion. A critical difference between Random Forest and the traditional decision tree algorithm is that only certain features are made available to each particular tree while determining split locations (which differentiates it from Bagging) and that each tree has access to only a random subset of data. This regularizes against overfitting, which is a common problem for decision tree methods. The important hyperparameters of the random forest models are:
+<ul>
+    <li>Max depth: The maximum depth of each individual tree. </li>
+    <li>num_estimators: The number of trees in the random forest </li>
+    <li> max_features: The maximum number of selected features that each tree can utilize. </li>
+</ul>
 
 <p style="text-align: justify;">
   <b>3. XGBoost Classifier</b>
