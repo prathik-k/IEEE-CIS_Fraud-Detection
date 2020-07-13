@@ -15,10 +15,10 @@ The standard logistic regression model was used along with SMOTE oversampling wh
 
 <p style="text-align: justify;">
   <b>2. Random Forest Classification</b>
-</p>
 Random forest is a classical tree-based ensemble learning method that constructs multiple individual decision trees in order to evaluate a class assignment of a data point.
 <p style="text-align: justify;">
   <b>3. XGBoost Classifier</b>
+</p>
 XGBoost is a tree-based ensemble learning framework that implements gradient boosting method. Gradient boosting is a machine learning technique for regression and classification problems, which produces a prediction model in the form of an ensemble of weak prediction models, typically decision trees.
 
 </p>
@@ -36,7 +36,7 @@ LightGBM is another gradient boosting tree based supervised learning method. Lig
 <p style="text-align: justify;">
   <b>Approach and Results</b>
 </p>
- We attempted these supervised learning methods on two cases of data - 1. the preprocessed data following the previous steps, and 2. PCA implmeneted to this preprocessed data. Moreover, the SMOTE oversampled data was used for the logistic regression case to obtain a more balanced training set.. After training each model, we let the model produce prediction of the test data and recorded their score through kaggle submission. The hyper-parameters were manually and lightly tuned to obtain moderate test scores. Followig table shows the results.
+ We attempted these supervised learning methods on two cases of data - 1) the preprocessed data following the previous steps, and 2) PCA implmeneted to this preprocessed data. Moreover, the SMOTE oversampled data was used for the logistic regression case to obtain a more balanced training set.. After training each model, we let the model produce prediction of the test data and recorded their score through kaggle submission. The hyper-parameters were manually and lightly tuned to obtain moderate test scores. Followig table shows the results.
  
 Table 1: Result from each model
 
@@ -50,7 +50,7 @@ Table 1: Result from each model
   </tr>
   <tr>
     <td>Logistic Regression</td>
-    <td> - </td>
+    <td>(SMOTE) sampling_strategy=0.05</td>
     <td>0.81</td>
     <td> - </td>
   </tr>
@@ -62,13 +62,25 @@ Table 1: Result from each model
   </tr>
   <tr>
     <td>XGBoost Classifier</td>
-    <td> - </td>
+    <td>n_estimators=250,
+        max_depth=15,
+        learning_rate=0.05,
+        subsample=0.9,
+        colsample_bytree=0.9,
+        tree_method = 'hist'</td>
     <td>0.928964</td>
     <td>0.921232</td>
   </tr>
   <tr>
     <td>LightGBM Classifier</td>
-    <td> - </td>
+    <td>max_bin = 63,
+    num_leaves = 255,
+    num_iterations = 500,
+    learning_rate = 0.01,
+    tree_learner = 'serial',
+    min_data_in_leaf = 1,
+    min_sum_hessian_in_leaf = 100,
+    sparse_threshold=1.0</td>
     <td>0.926462</td>
     <td>0.921232</td>
   </tr>
