@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Conclusion
-subtitle: Review what we've done
+subtitle: Discussion and Future steps
 ---
 
 <p style="text-align: justify;">
