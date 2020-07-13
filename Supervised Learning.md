@@ -28,3 +28,44 @@ LightGBM is a gradient boosting tree based supervised learning method. Gradient 
   
   When we used the LightGBM classifier on our data, we were able to get a score of 0.926 on the kaggle leaderboard. So this algorithm performed well.
 </p>
+
+<p style="text-align: justify;">
+  <b>Approach and Results</b>
+</p>
+ We attempted these supervised learning methods on two cases of data - 1. the preprocessed data following the previous steps, and 2. PCA implmeneted to this preprocessed data. Moreover, the SMOTE oversampled data was used for the logistic regression case to obtain a more balanced training set.. After training each model, we let the model produce prediction of the test data and recorded their score through kaggle submission. The hyper-parameters were manually and lightly tuned to obtain moderate test scores. Followig table shows the results.
+ 
+Table 1: Result from each model
+
+<table style="width:100%">
+  <tr>
+    <th>Model(s) Name</th>
+    <th>Hyper-parameters</th>
+    <th>Prediction Score</th>
+    <th>Prediction Score with PCA</th>
+
+  </tr>
+  <tr>
+    <td>Logistic Regression</td>
+    <td>#</td>
+    <td>0.81</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>Random Forest Classification</td>
+    <td>#</td>
+    <td>0.893633</td>
+    <td>0.893633</td>
+  </tr>
+  <tr>
+    <td>XGBoost Classifier</td>
+    <td>#</td>
+    <td>0.928964</td>
+    <td>0.921232</td>
+  </tr>
+  <tr>
+    <td>LightGBM Classifier</td>
+    <td> </td>
+    <td>0.926462</td>
+    <td>0.921232</td>
+  </tr>
+</table>
