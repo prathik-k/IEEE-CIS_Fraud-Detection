@@ -16,6 +16,8 @@ The standard logistic regression model was used along with SMOTE oversampling wh
 <p style="text-align: justify;">
   <b>2. Random Forest Classification</b>
 Random forest is a classical tree-based ensemble learning method that constructs multiple individual decision trees in order to evaluate a class assignment of a data point.
+</p>
+
 <p style="text-align: justify;">
   <b>3. XGBoost Classifier</b>
 </p>
