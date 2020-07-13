@@ -103,7 +103,6 @@ LightGBM supports various hyper-parameters. Table 1 lists some of the important 
   <tr>
     <td>metric</td>
     <td>Cost penalty for a prediction. We chose the area under the curve metric</td>
-    <td>auc</td>
   </tr>
 </table>
 <center>Table 1: LightGBM Hyper-parameters</center>
