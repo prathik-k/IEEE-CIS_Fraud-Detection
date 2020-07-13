@@ -8,7 +8,7 @@ code.has-jax {font: inherit; font-size: 100%; background: inherit; border: inher
 </style>
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
-    displayAlign: "left",
+    displayAlign: "center",
     tex2jax: {
         inlineMath: [['$','$'], ['\\(','\\)']],
         skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'] // removed 'code' entry
