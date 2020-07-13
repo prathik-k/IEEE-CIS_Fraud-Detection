@@ -43,36 +43,37 @@ Table 1: Result from each model
 <table style="width:100%">
   <tr>
     <th>Model(s) Name</th>
-    <th>Hyper-parameters</th>
     <th>Prediction Score</th>
     <th>Prediction Score with PCA</th>
-
+    <th>Hyper-parameters</th>
   </tr>
   <tr>
     <td>Logistic Regression</td>
-    <td>(SMOTE) sampling_strategy=0.05</td>
     <td>0.81</td>
     <td> - </td>
+    <td>(SMOTE) sampling_strategy=0.05</td>
   </tr>
   <tr>
     <td>Random Forest Classification</td>
+    <td>0.893633</td>
+    <td>0.893633</td>
     <td> - </td>
-    <td>0.893633</td>
-    <td>0.893633</td>
   </tr>
   <tr>
     <td>XGBoost Classifier</td>
+    <td>0.928964</td>
+    <td>0.921232</td>
     <td>n_estimators=250,
         max_depth=15,
         learning_rate=0.05,
         subsample=0.9,
         colsample_bytree=0.9,
         tree_method = 'hist'</td>
-    <td>0.928964</td>
-    <td>0.921232</td>
   </tr>
   <tr>
     <td>LightGBM Classifier</td>
+    <td>0.928964</td>
+    <td>0.921232</td>
     <td>max_bin = 63,
     num_leaves = 255,
     num_iterations = 500,
@@ -81,8 +82,6 @@ Table 1: Result from each model
     min_data_in_leaf = 1,
     min_sum_hessian_in_leaf = 100,
     sparse_threshold=1.0</td>
-    <td>0.926462</td>
-    <td>0.921232</td>
   </tr>
 </table>
 
