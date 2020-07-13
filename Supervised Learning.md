@@ -4,12 +4,8 @@ title: Supervised Learning
 subtitle: LightGBM, Random Forest, XGBoost
 ---
 
-<script type="text/javascript" id="MathJax-script" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
-</script>
 
-When \(a \ne 0\), there are two solutions to \(ax^2 + bx + c = 0\) and they are
-$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
+
 
 <p style="text-align: justify;">
 For this project, we attempted a variety of supervised classification methods that are well suited to binary classification problems with severe class imbalance. In this section, we describe some background theory, our approaches and results obtained from this step.
@@ -19,6 +15,7 @@ For this project, we attempted a variety of supervised classification methods th
   <b>1. Logistic Model</b>
 </p>
 Logistic regression is a binary classification algorithm that is used to model the probability of a data point belonging to a class. The equation for logistic regression that models this probability is given by:
+<a href="https://www.codecogs.com/eqnedit.php?latex=p(X)&space;=&space;\frac{e^{\beta_{0}&plus;\beta_{1}X}}{1&plus;e^{\beta_{0}&plus;\beta_{1}X}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?p(X)&space;=&space;\frac{e^{\beta_{0}&plus;\beta_{1}X}}{1&plus;e^{\beta_{0}&plus;\beta_{1}X}}" title="p(X) = \frac{e^{\beta_{0}+\beta_{1}X}}{1+e^{\beta_{0}+\beta_{1}X}}" /></a>
 The standard logistic regression model was used along with SMOTE oversampling which is described in the previous section.
 
 
