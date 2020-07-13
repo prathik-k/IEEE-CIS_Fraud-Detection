@@ -63,16 +63,16 @@ Fig. 4. SMOTE on a low-dimensional dataset. [2]
 T-distributed stochastic neighbor embedding (TSNE) is a method to visualize high-dimensional data. Time features are D columns and there are 14 features which is hard to understand their relationship between Fraud and NotFraud classes. Therefore, our team utilized TSNE to better understand low dimensional data representation. What's more, our team would like to know whether to find two clusters seperating two classes easily.
 </p>
 
-![Img](/assets/img/TSNEFraud.png)
-
 ![Img](/assets/img/TSNENotFraud.png)
+
+![Img](/assets/img/TsneIsFraud.png)
 
 <center>
 Fig. 5. TSNE on a time features dataset. 
 </center>
 
 <br>
-Based on two figures above, the two classes are not easily seperated, but the NotFraud class concentrate on the left side and the isFraud class evenly spread. This shows that the fraudulent transactions are more well spread out. Therefore, if we decided use first dimenstion as our decision line, the boundary may be selected as x = 400 beyond which there is a higher chance that the transaction is fraudulent.
+Based on two figures above, the two classes are not easily seperated, but the isFraud class concentrate on the left side and the NonFraud class evenly spread. This shows that the fraudulent transactions are more well spread out. Therefore, if we decided use first dimenstion as our decision line, the boundary may be selected as x = 400 beyond which there is a higher chance that the transaction is not fraudulent.
 </p>
 
 <b>5. MDS Embedding on Transaction Features</b>
