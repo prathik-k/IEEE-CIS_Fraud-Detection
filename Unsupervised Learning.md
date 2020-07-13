@@ -121,7 +121,7 @@ Fig. 8. 3D visualization of PCA.
 </center>
 
 <br>
-In Fig. 8, the two clusters are still overlapped much. However, we can observe that the fraud cluster is more concentrated and somehow forms a line in the 3D plot, where as the non-fraud cluster scatters all over the space.
+In Fig. 8, the orange points are the fraud cluster and the blue ones are the non-fraud cluster. Although the two clusters are still overlapped much, we can still observe that the fraud cluster is more concentrated and somehow forms a line in the 3D plot, where as the non-fraud cluster scatters all over the space.
 </p>
 
 <b>References</b>
