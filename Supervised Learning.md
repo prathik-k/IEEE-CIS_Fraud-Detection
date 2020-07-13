@@ -75,37 +75,30 @@ LightGBM supports various hyper-parameters. Table 1 lists some of the important 
   <tr>
     <th>Parameter Name</th>
     <th>Description</th>
-    <th>Value</th>
   </tr>
   <tr>
     <td>num_leaves</td>
     <td>Number of leaves in the full tree</td>
-    <td>256</td>
   </tr>
   <tr>
     <td>objective</td>
     <td>We chose Binary as this is a classification problem</td>
-    <td>binary</td>
   </tr>
   <tr>
     <td>max_depth</td>
     <td>Max depth of the tree. Used to control overfitting</td>
-    <td>13</td>
   </tr>
   <tr>
     <td>min_child_samples</td>
     <td>Minimum number of data points needed in a child (leaf) node. This is a very important parameter to prevent overfitting.</td>
-    <td>79</td>
   </tr>
   <tr>
     <td>boosting_type</td>
     <td>We chose gradient boosting</td>
-    <td>gbdt</td>
   </tr>
   <tr>
     <td>subsample_freq</td>
     <td>This specifies that bagging should be performed after every k iterations</td>
-    <td>3</td>
   </tr>
   <tr>
     <td>metric</td>
