@@ -23,7 +23,7 @@ Random forest is a classical tree-based ensemble learning method that constructs
 <p style="text-align: justify;">
   <b>3. XGBoost Classifier</b>
 </p>
-XGBoost is a tree-based ensemble learning framework that implements gradient boosting method. Gradient boosting is a machine learning technique for regression and classification problems, which produces a prediction model in the form of an ensemble of weak prediction models, typically decision trees. Following are the features that XGBoost differ from other tree-boosting algorithms:
+XGBoost is a tree-based ensemble learning framework that implements gradient boosting method. Gradient boosting is a machine learning technique for regression and classification problems, which produces a prediction model in the form of an ensemble of weak prediction models, typically decision trees. Following are the features that XGBoost differ from other tree-boosting algorithms[1]:
 <ul>
 <li>novel tree learning algorithm that handles sparse data</li>
 <li>weighted quantile sketch procedure for approximate tree learning</li>
