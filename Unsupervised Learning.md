@@ -89,7 +89,7 @@ Fig. 6. MDS embedding on transaction features.
 </center>
 
 <br>
-In Fig. 6, We observe that the two clusters show very different shapes. The distribution of non-fraud cluster is circular, surrounding the the (0,0} point, while the fraud cluster concentrates at the lower-right corner. It is noted that the transaction dataset is a reduced form with the first 20000 data points only.
+In Fig. 6, We observe that the two clusters show very different shapes. The distribution of non-fraud cluster is circular, surrounding the the (0,0} point, while the fraud cluster concentrates at (0,0), the lower-right corner. It is noted that the transaction dataset is a reduced form with the first 20000 data points.
 </p>
 
 <b>6. Spectral embedding on Transaction Features </b>
@@ -106,7 +106,7 @@ Fig. 7. Spectral embedding on transaction features.
 </center>
 
 <br>
-In Fig. 7, unfortunately, the two clusters show similar shapes on the first two components. This is probably due to the weak spectral meaning in the transaction data. It is noted that the transaction dataset here is of a reduced form with the first 20000 data points only.
+In Fig. 7, unfortunately, the two clusters show similar shapes on the first two components. This is probably due to the weak spectral meaning in the transaction data. It is noted that the transaction dataset here is of a reduced form with the first 20000 data points.
 </p>
 
 <b>7. 3D Visualization of PCA </b>
