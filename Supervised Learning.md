@@ -33,8 +33,7 @@ For this project, we attempted a variety of supervised classification methods th
 </p>
 Logistic regression is a binary classification algorithm that is used to model the probability of a data point belonging to a class. The equation for logistic regression that models this probability is given by: <br> <br>
 <a href="https://www.codecogs.com/eqnedit.php?latex=p(X)&space;=&space;\frac{e^{\beta_{0}&plus;\beta_{1}X}}{1&plus;e^{\beta_{0}&plus;\beta_{1}X}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?p(X)&space;=&space;\frac{e^{\beta_{0}&plus;\beta_{1}X}}{1&plus;e^{\beta_{0}&plus;\beta_{1}X}}" title="p(X) = \frac{e^{\beta_{0}+\beta_{1}X}}{1+e^{\beta_{0}+\beta_{1}X}}" /></a> <br>
-where 
-The standard logistic regression model was used along with SMOTE oversampling which is described in the previous section.
+where the standard logistic regression model was used along with SMOTE oversampling which is described in the previous section.
 
 
 <p style="text-align: justify;">
