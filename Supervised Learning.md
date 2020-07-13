@@ -103,7 +103,7 @@ Table 1: Result from each model
 ![Img](/assets/img/LightGBM_with_PCA.png)
 ![Img](/assets/img/XGBoost.png)
 ![Img](/assets/img/XGBoost_with_PCA.png)
-![Img](/assets/img/RandomForest.png)
+![Img](/assets/img/RandomForest.jpg)
 ![Img](/assets/img/RandomForest_with_pca.jpg)
 
 <b>References</b>
