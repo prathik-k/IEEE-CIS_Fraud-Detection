@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Unsupervised Learning
-subtitle: PCA, SMOTE
+subtitle: PCA, SMOTE, TSNE
 ---
 
 <p style="text-align: justify;">
@@ -50,7 +50,7 @@ Fig. 3. Scree plot of PCA on V.
 <b>3. SMOTE Oversampling of the dataset to overcome imbalance</b>
 <br>
 Since most of the supervised learning methods we used were tree-based, they performed well on the classification task in spite of the huge discrepancy in quantity of data for the genuine and fraudulent categories. However, we attempted to compare our methods with another form of classification (logistic regression) to ascertain the effectiveness of alternative methods. To prepare the data for this, we decided to use SMOTE (Synthetic Minority Oversampling TEchnique) followed by random undersampling of the genuine data. SMOTE draws a line between random points (that are amongst k-Nearest Neighbors of each other) in the minority class in the high dimensinal space, and artificially synthesizes data points along this line. After applying SMOTE to the minority class to achieve a class ratio of 0.2, we used random undersampling on the genuine data to reduce the number of datapoints to the original number. We recognize that this undersampling could involve discarding some useful data points; however, it was necessary to make the dataset less unwieldy and run the logistic regression in a computationally efficient way. Fig. 4. illustrates the SMOTE procedure for a lower-dimensional case; the same concept may be extended to the higher dimensional case.
-</p>
+</br>
 
 ![Img](/assets/img/SMOTE_sample.jpg)
 
