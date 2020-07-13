@@ -38,7 +38,8 @@ $$p(X) = \frac{e^{\beta_{0}+\beta_{1}X}}{1+e^{\beta_{0}+\beta_{1}X}}$$
 where $\beta_{0}$ and $\beta{1}$ are constants that need to be computed. This function is also referred to as the sigmoid function - a sample plot of the sigmoid function is shown in Fig. 1. In this project, the standard logistic regression model was used along with SMOTE oversampling which is described in the previous section.
 </p>
 
-![Img](/assets/img/sigmoid.png)
+![Img](/assets/img/sigmoid.png) 
+<br>
 Fig. 1. The sigmoid curve. Note that the classification procedure yields a probability between 0 and 1.
 
 <p style="text-align: justify;">
