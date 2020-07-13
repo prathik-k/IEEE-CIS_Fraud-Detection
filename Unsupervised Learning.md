@@ -68,11 +68,45 @@ T-distributed stochastic neighbor embedding (TSNE) is a method to visualize high
 ![Img](/assets/img/TSNENotFraud.png)
 
 <center>
-Fig. 4. TSNE on a time features dataset. 
+Fig. 5. TSNE on a time features dataset. 
 </center>
 
 <br>
 Based on two figures above, the two classes are not easily seperated, but the NotFraud class concentrate on the left side and the isFraud class evenly spread. This shows that the fraudulent transactions are more well spread out. Therefore, if we decided use first dimenstion as our decision line, the boundary may be selected as x = 400 beyond which there is a higher chance that the transaction is fraudulent.
+</p>
+
+<b>5. MDS Embedding on Transaction Features</b>
+<br>
+Multidimensional scaling (MDS) is often applied to visualize the level of similarity between cases in a given dataset. Transaction data consist of more than 300 features. It is almost impossible to use two vectors to fully distinguish the clusters for fraud and non-fraud cases. Our goal is to see if the patterns of the fraud and non-fraud clusters show different shapes after MDS, where they are projected onto the first two principles components.
+</p>
+
+![Img](/assets/img/MDS_notfraud.png)
+
+![Img](/assets/img/MDS_fraud.png)
+
+<center>
+Fig. 6. MDS embedding on transaction features. 
+</center>
+
+<br>
+In Fig. 6, We observe that the two clusters show very different shapes. The distribution of non-fraud cluster is circular, surrounding the the (0,0} point, while the fraud cluster concentrates at the lower-right corner.
+</p>
+
+<b>6. Spectral embedding on Transaction Features </b>
+<br>
+Spectral embedding us for non-linear dimensionality reduction. It forms a specified function and applies spectral decomposition to the corresponding graph laplacian. The resultant values are the eigenvectors for each data point.
+</p>
+
+![Img](/assets/img/spectral_embedding_notfraud.png)
+
+![Img](/assets/img/spectral_embedding_fraud.png)
+
+<center>
+Fig. 7. Spectral embedding on transaction features. 
+</center>
+
+<br>
+In Fig. 7, unfortunately, the two clusters show similar shapes on the first two components. This is probably due to the weak spectral meaning in the transaction data.
 </p>
 
 <b>References</b>
