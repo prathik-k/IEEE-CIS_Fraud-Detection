@@ -120,6 +120,7 @@ Fig. 1. Disparity between fraudulent and genuine data
 
 <p style="text-align: justify;">
 <b>Objective</b> 
+ <br>
 The objective of the problem is to predict a probability for a transaction in the test dataset of being fraudulent (a value between 0 or 1). The submission is evaluated in terms of area under the ROC curve between the predicted value and observed target.
 </p>
 
