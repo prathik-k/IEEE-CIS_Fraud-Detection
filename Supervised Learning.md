@@ -95,7 +95,11 @@ Table 1: Result from each model
     <td>Random Forest Classification</td>
     <td>0.893633</td>
     <td>0.893633</td>
-    <td> - </td>
+    <td> n_estimators=200,
+      max_depth=15,
+      max_features=25,
+      criterion='gini'      
+    </td>
   </tr>
   <tr>
     <td>XGBoost Classifier</td>
