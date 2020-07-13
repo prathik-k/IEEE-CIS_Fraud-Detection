@@ -47,25 +47,25 @@ Table 1: Result from each model
   </tr>
   <tr>
     <td>Logistic Regression</td>
-    <td>#</td>
+    <td> - </td>
     <td>0.81</td>
-    <td> </td>
+    <td> - </td>
   </tr>
   <tr>
     <td>Random Forest Classification</td>
-    <td>#</td>
+    <td> - </td>
     <td>0.893633</td>
     <td>0.893633</td>
   </tr>
   <tr>
     <td>XGBoost Classifier</td>
-    <td>#</td>
+    <td> - </td>
     <td>0.928964</td>
     <td>0.921232</td>
   </tr>
   <tr>
     <td>LightGBM Classifier</td>
-    <td> </td>
+    <td> - </td>
     <td>0.926462</td>
     <td>0.921232</td>
   </tr>
