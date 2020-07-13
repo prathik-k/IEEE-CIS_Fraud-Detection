@@ -72,7 +72,7 @@ Fig. 4. TSNE on a time features dataset.
 </center>
 
 <p>
-Based on two figures above, 
+Based on two figures above, the two classes are not easily seperated, but the NotFraud class concentrate on the left side and the isFraud class evenly spread. Therefore, if we decided use first dimenstion as our decision line, that might be x = 400 which we would think there is a higher chance that this example is Fraud.
 </p>
 
 <b>References</b>
