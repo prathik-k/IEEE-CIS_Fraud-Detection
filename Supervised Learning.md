@@ -35,7 +35,7 @@ For this project, we attempted a variety of supervised classification methods th
 Logistic regression is a binary classification algorithm that is used to model the probability of a data point belonging to a class. The equation for logistic regression that models this probability is given by: <br>
 $$p(X) = \frac{e^{\beta_{0}+\beta_{1}X}}{1+e^{\beta_{0}+\beta_{1}X}}$$
 
-where $\beta_{0}$ and $\beta_{1}$ are constants that need to be computed. This function is also referred to as the sigmoid function - a sample plot of the sigmoid function is shown in Fig. 1. In this project, the standard logistic regression model was used along with SMOTE oversampling which is described in the previous section.
+where $\beta_{0}$ and $\beta_{1}$ are constants that need to be computed [1]. This function is also referred to as the sigmoid function - a sample plot of the sigmoid function is shown in Fig. 1. In this project, the standard logistic regression model was used along with SMOTE oversampling which is described in the previous section.
 </p>
 ![Img](/assets/img/sigmoid.png) 
 <br>
@@ -54,7 +54,7 @@ Random forest is a classical tree-based ensemble learning method that constructs
 <p style="text-align: justify;">
   <b>3. XGBoost Classifier</b>
 </p>
-XGBoost is a tree-based ensemble learning framework that implements gradient boosting method. Gradient boosting is a machine learning technique for regression and classification problems, which produces a prediction model in the form of an ensemble of weak prediction models, typically decision trees. Following are the features that XGBoost differ from other tree-boosting algorithms[1]:
+XGBoost is a tree-based ensemble learning framework that implements gradient boosting method. Gradient boosting is a machine learning technique for regression and classification problems, which produces a prediction model in the form of an ensemble of weak prediction models, typically decision trees. Following are the features that XGBoost differ from other tree-boosting algorithms[2]:
 <ul>
 <li>novel tree learning algorithm that handles sparse data</li>
 <li>weighted quantile sketch procedure for approximate tree learning</li>
@@ -177,7 +177,7 @@ LightGBM supports various hyper-parameters. Table 1 lists some of the important 
 
 <b>References</b>
 <br>
-
-[1] Tianqi Chen and Carlos Guestrin. Xgboost: A scalable tree boosting system. In Proceedings of the 22Nd ACM SIGKDD International
+[1] http://stat.cmu.edu/~cshalizi/uADA/12/lectures/ch12.pdf
+[2] Tianqi Chen and Carlos Guestrin. Xgboost: A scalable tree boosting system. In Proceedings of the 22Nd ACM SIGKDD International
 Conference on Knowledge Discovery and Data Mining, pages 785–794. ACM, 2016.
 
