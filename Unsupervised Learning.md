@@ -119,7 +119,6 @@ Spectral embedding is for non-linear dimensionality reduction. It forms a specif
 Fig. 8. Spectral embedding on transaction features. 
 </center>
 
-<br>
 <p>
 From the above figure, we see that the two clusters show similar shapes on the first two components - as such, these two features fail to help us distinguish between the genuine and fraudulent data points. This is probably due to the weak spectral meaning in the transaction data. It is noted that the transaction dataset here is of a reduced form with the first 20000 data points (equally sampled from both classes).
 </p>
