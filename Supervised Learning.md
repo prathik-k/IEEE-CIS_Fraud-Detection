@@ -61,6 +61,40 @@ XGBoost is a tree-based ensemble learning framework that implements gradient boo
 <li>out-of-core computation to effectively process data</li>
 </ul>
 
+Also, among the hyper-parameters XGBoost uses[3], we considered the following parameters to train our model.
+<table style="width:100%">
+  <tr>
+    <th>Parameter Name</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>objective</td>
+    <td>'binary:logistic' was chosed to handle this classification problem</td>
+  </tr>
+  <tr>
+    <td>max_depth</td>
+    <td>Maximum depth of a tree, which controls complexity and overfitting</td>
+  </tr>
+  <tr>
+    <td>subsample</td>
+    <td>Subsample ratio of the training instance, occuring once in every boosting iteration</td>
+  </tr>
+  <tr>
+    <td>colsample_bytree</td>
+    <td>Subsample ratio of columns when constructing each tree</td>
+  </tr>
+  <tr>
+    <td>tree_method</td>
+    <td>Tree construction algorithm. We used 'hist', a faster histogram optimized approximate greedy algorithm. </td>
+  </tr>
+  <tr>
+    <td>metric</td>
+    <td>Cost penalty for a prediction. We chose the area under the curve metric</td>
+  </tr>
+</table>
+<center>Table 1: XGBoost Hyper-parameters</center>
+
+
 <p style="text-align: justify;">
   <b>4. LightGBM Classifier</b>
 </p>
@@ -70,7 +104,7 @@ LightGBM is another gradient boosting tree based supervised learning method. Lig
 <li>Reduce memory usage</li>
 <li>Reduce communication cost for parallel learning</li>
 </ul>
-LightGBM supports various hyper-parameters [3]. Table 1 lists some of the important ones and the values we used:
+LightGBM supports various hyper-parameters [4]. Table 2 lists some of the important ones and the values we used:
 <table style="width:100%">
   <tr>
     <th>Parameter Name</th>
@@ -105,7 +139,7 @@ LightGBM supports various hyper-parameters [3]. Table 1 lists some of the import
     <td>Cost penalty for a prediction. We chose the area under the curve metric</td>
   </tr>
 </table>
-<center>Table 1: LightGBM Hyper-parameters</center>
+<center>Table 2: LightGBM Hyper-parameters</center>
 
 <p style="text-align: justify;">
   <b>Approach and Results</b>
@@ -161,7 +195,7 @@ LightGBM supports various hyper-parameters [3]. Table 1 lists some of the import
   </tr>
 </table>
 
-<center>Table 2: Result from each model</center>
+<center>Table 3: Result from each model</center>
 
 <p style="text-align: justify;">
   <b>AUC-ROC curves</b>
@@ -181,5 +215,6 @@ LightGBM supports various hyper-parameters [3]. Table 1 lists some of the import
 [1] http://stat.cmu.edu/~cshalizi/uADA/12/lectures/ch12.pdf <br>
 [2] Tianqi Chen and Carlos Guestrin. Xgboost: A scalable tree boosting system. In Proceedings of the 22Nd ACM SIGKDD International
 Conference on Knowledge Discovery and Data Mining, pages 785–794. ACM, 2016. <br>
-[3]  LightGBM Docs, URL: https://lightgbm.readthedocs.io/en/latest/Parameters.html
+[3]  XGBoost Docs, https://xgboost.readthedocs.io/en/latest/parameter.html
+[4]  LightGBM Docs, URL: https://lightgbm.readthedocs.io/en/latest/Parameters.html
 </p>
