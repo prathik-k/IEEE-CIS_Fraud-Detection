@@ -28,7 +28,7 @@ Overall, we achieved good performance with our tree-based models. Out of the thr
     <b>Contributions:</b> <br>
     Divyanshu Upreti: Data preprocessing, unsupervised learning, supervised learning, report writing <br>
     Jamin Seo: Supervised learning, report writing <br>
-    Jim Liu: Data preprocessing, unsupervised learning, report writing <br>
+    Chen-Yang Liu: Data preprocessing, unsupervised learning, report writing <br>
     Prathik Kaundinya: Data preprocessing, unsupervised learning, supervised learning, report writing <br>
     Yuan Chun-Lo: Unsupervised learning, report writing <br>
  </p>
