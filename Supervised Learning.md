@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Supervised Learning
-subtitle: LightGBM, Random Forest, XGBoost
+subtitle: Logistic Model, LightGBM, Random Forest, XGBoost
 ---
 <style TYPE="text/css">
 code.has-jax {font: inherit; font-size: 100%; background: inherit; border: inherit;}
