@@ -111,7 +111,7 @@ Fig. 7. Spectral embedding on transaction features.
 
 <br>
 <p>
-In Fig. 7, unfortunately, the two clusters show similar shapes on the first two components. This is probably due to the weak spectral meaning in the transaction data. It is noted that the transaction dataset here is of a reduced form with the first 20000 data points.
+From the above figure, we see that the two clusters show similar shapes on the first two components - as such, these two features fail to help us distinguish between the genuine and fraudulent data points. This is probably due to the weak spectral meaning in the transaction data. It is noted that the transaction dataset here is of a reduced form with the first 20000 data points (equally sampled from both classes).
 </p>
 
 <b>7. 3D Visualization of PCA </b>
