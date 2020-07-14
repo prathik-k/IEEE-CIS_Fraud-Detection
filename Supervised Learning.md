@@ -70,7 +70,7 @@ LightGBM is another gradient boosting tree based supervised learning method. Lig
 <li>Reduce memory usage</li>
 <li>Reduce communication cost for parallel learning</li>
 </ul>
-LightGBM supports various hyper-parameters. Table 1 lists some of the important ones and the values we used:
+LightGBM supports various hyper-parameters [3]. Table 1 lists some of the important ones and the values we used:
 <table style="width:100%">
   <tr>
     <th>Parameter Name</th>
@@ -178,9 +178,10 @@ LightGBM supports various hyper-parameters. Table 1 lists some of the important 
 <p style="text-align: justify;">
 <b>References</b>
 <br>
-[1] http://stat.cmu.edu/~cshalizi/uADA/12/lectures/ch12.pdf
+[1] http://stat.cmu.edu/~cshalizi/uADA/12/lectures/ch12.pdf <br>
 [2] Tianqi Chen and Carlos Guestrin. Xgboost: A scalable tree boosting system. In Proceedings of the 22Nd ACM SIGKDD International
-Conference on Knowledge Discovery and Data Mining, pages 785–794. ACM, 2016.
+Conference on Knowledge Discovery and Data Mining, pages 785–794. ACM, 2016. <br>
+[3]  LightGBM Docs, URL: https://lightgbm.readthedocs.io/en/latest/Parameters.html
 </p>
 <p style="text-align: justify;">
     <b>Contributions:</b> <br>
