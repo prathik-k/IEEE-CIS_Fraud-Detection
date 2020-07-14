@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Unsupervised Learning
-subtitle: PCA, SMOTE, TSNE
+subtitle: PCA, SMOTE, t-SNE,MDS and Spectral embedding
 ---
 
 <p style="text-align: justify;">
@@ -36,31 +36,41 @@ Fig. 2.Correlation heat map for the features V12 to V34 (One of the groups)
   The V components form the majority of the features in the transaction data. As such, applying a suitable dimensionality reduction scheme to capture the variance in the V columns is a good step in reducing model complexity, overfitting and interpretability. PCA is a suitable dimensionality reduction technique that provides an orthogonal linear transformation of the features to project the high-dimensional data onto a set of uncorrelated axes (called principle components). The transformed data are ordered in decreasing order of variance captured, so that the subset of selected features maximize the variance in the representation. 
   </p>
 <p style="text-align: justify;">
-  We decided to apply PCA to only individual groups of features (such as the D features, V features, etc.) independently, instead of the entire dataset as a whole. This is because the different classes of features could be either categorical or numeric (i.e. different types of data) and also had very different scales. Moreover, only the PCA on the V data appeared to be useful in reducing dimensionality while maintaining a similar level of performance; when applied to the other categories of features, the performance of the model drastically worsened. Fig. 3. Shows the scree plot of the PCA on the V columns. As can be seen, the first few components do not account for much of the variance (in fact, ~50 components are needed to capture 99% of the variance in the V columns). This is in line with expectations for a complicated dataset as in this case; as such, plotting the first 3 PCs did not yield much separation between the classes of data (genuine and fraudulent transactions).
+  We decided to apply PCA to only individual groups of features (such as the D features, V features, etc.) independently, instead of the entire dataset as a whole. This is because the different classes of features could be either categorical or numeric (i.e. different types of data) and also had very different scales. Moreover, only the PCA on the V data appeared to be useful in reducing dimensionality while maintaining a similar level of performance; when applied to the other categories of features, the performance of the model drastically worsened. Fig. 3. Shows the scree plot of the PCA on the V columns. As can be seen, the first few components do not account for much of the variance (in fact, ~50 components are needed to capture 99% of the variance in the V columns). This is in line with expectations for a complicated dataset as in this case; as such, plotting the first 3 PCs did not yield much separation between the classes of data (genuine and fraudulent transactions). Fig. 4. shows a 3-D visualization of the PCA on the V columns, and the effect it has on being able to distinguish between the classes. Although the first few components of the PCA transformation do not account for a large portion of variation, we are still interested in how good the first three components are able to separate the two clusters. As can be seen from this figure, the orange points are the fraud cluster and the blue ones are the non-fraud cluster. Although the two clusters are still overlapped much, we can still observe that the fraud cluster is more concentrated and somehow forms a line in the 3D plot, where as the non-fraud cluster scatters all over the space.
 </p>
+<br>
+
+
 
 ![Img](/assets/img/V_pca.jpg)
 
 <center>
 Fig. 3. Scree plot of PCA on V.
 </center>
+<br>
+
+![Img](/assets/img/3D_PCA.png)
+
+<center>
+Fig. 4. 3D visualization of PCA. 
+</center>
 
 <p style="text-align: justify;">
 
 <b>3. SMOTE Oversampling of the dataset to overcome imbalance</b>
 <br>
-Since most of the supervised learning methods we used were tree-based, they performed well on the classification task in spite of the huge discrepancy in quantity of data for the genuine and fraudulent categories. However, we attempted to compare our methods with another form of classification (logistic regression) to ascertain the effectiveness of alternative methods. To prepare the data for this, we decided to use SMOTE (Synthetic Minority Oversampling TEchnique) followed by random undersampling of the genuine data. SMOTE draws a line between random points (that are amongst k-Nearest Neighbors of each other) in the minority class in the high dimensinal space, and artificially synthesizes data points along this line. After applying SMOTE to the minority class to achieve a class ratio of 0.2, we used random undersampling on the genuine data to reduce the number of datapoints to the original number. We recognize that this undersampling could involve discarding some useful data points; however, it was necessary to make the dataset less unwieldy and run the logistic regression in a computationally efficient way. Fig. 4. illustrates the SMOTE procedure for a lower-dimensional case; the same concept may be extended to the higher dimensional case.
+Since most of the supervised learning methods we used were tree-based, they performed well on the classification task in spite of the huge discrepancy in quantity of data for the genuine and fraudulent categories. However, we attempted to compare our methods with another form of classification (logistic regression) to ascertain the effectiveness of alternative methods. To prepare the data for this, we decided to use SMOTE (Synthetic Minority Oversampling TEchnique) followed by random undersampling of the genuine data. SMOTE draws a line between random points (that are amongst k-Nearest Neighbors of each other) in the minority class in the high dimensinal space, and artificially synthesizes data points along this line. After applying SMOTE to the minority class to achieve a class ratio of 0.2, we used random undersampling on the genuine data to reduce the number of datapoints to the original number. We recognize that this undersampling could involve discarding some useful data points; however, it was necessary to make the dataset less unwieldy and run the logistic regression in a computationally efficient way. Fig. 5. illustrates the SMOTE procedure for a lower-dimensional case; the same concept may be extended to the higher dimensional case.
 </p>
 
 ![Img](/assets/img/SMOTE_sample.jpg)
 
 <center>
-Fig. 4. SMOTE on a low-dimensional dataset. [2]
+Fig. 5. SMOTE on a low-dimensional dataset. [2]
 </center>
 
-<b>4. TSNE on Time Features</b>
+<b>4. t-SNE on Time Features</b>
 <br>
-T-distributed stochastic neighbor embedding (TSNE) is a method to visualize high-dimensional data. Time features are D columns and there are 14 features which is hard to understand their relationship between Fraud and NotFraud classes. Therefore, our team utilized TSNE to better understand low dimensional data representation. What's more, our team would like to know whether to find two clusters seperating two classes easily.
+T-distributed stochastic neighbor embedding (t-SNE) is a method to visualize high-dimensional data. Time features are D columns and there are 14 features which is hard to understand their relationship between Fraud and NotFraud classes. Therefore, our team utilized TSNE to better understand low dimensional data representation. What's more, our team would like to know whether to find two clusters seperating two classes easily.
 </p>
 
 ![Img](/assets/img/TSNENotFraud.png)
@@ -68,7 +78,7 @@ T-distributed stochastic neighbor embedding (TSNE) is a method to visualize high
 ![Img](/assets/img/TsneIsFraud.png)
 
 <center>
-Fig. 5. TSNE on a time features dataset. 
+Fig. 6. t-SNE on a time features dataset. 
 </center>
 
 <br>
@@ -87,7 +97,7 @@ Multidimensional scaling (MDS) is often applied to visualize the level of simila
 ![Img](/assets/img/MDS_fraud.png)
 
 <center>
-Fig. 6. MDS embedding on transaction features. 
+Fig. 7. MDS embedding on transaction features. 
 </center>
 
 <br>
@@ -106,30 +116,15 @@ Spectral embedding is for non-linear dimensionality reduction. It forms a specif
 ![Img](/assets/img/spectral_embedding_fraud.png)
 
 <center>
-Fig. 7. Spectral embedding on transaction features. 
+Fig. 8. Spectral embedding on transaction features. 
 </center>
 
 <br>
 <p>
 From the above figure, we see that the two clusters show similar shapes on the first two components - as such, these two features fail to help us distinguish between the genuine and fraudulent data points. This is probably due to the weak spectral meaning in the transaction data. It is noted that the transaction dataset here is of a reduced form with the first 20000 data points (equally sampled from both classes).
 </p>
-
-<b>7. 3D Visualization of PCA </b>
 <br>
-<p>
-Although the first few components of the PCA transformation do not account for a large portion of variation, we are still interested in how good the first three components are able to separate the two clusters.
-</p>
 
-![Img](/assets/img/3D_PCA.png)
-
-<center>
-Fig. 8. 3D visualization of PCA. 
-</center>
-
-<br>
-<p>
-In Fig. 8, the orange points are the fraud cluster and the blue ones are the non-fraud cluster. Although the two clusters are still overlapped much, we can still observe that the fraud cluster is more concentrated and somehow forms a line in the 3D plot, where as the non-fraud cluster scatters all over the space.
-</p>
 
 <b>References</b>
 <br>
