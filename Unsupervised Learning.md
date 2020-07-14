@@ -89,7 +89,7 @@ Based on two figures above, the two classes are not easily seperated, but the is
 <b>5. MDS Embedding on Transaction Features</b>
 <br>
 <p>
-Multidimensional scaling (MDS) is often applied to visualize the level of similarity between cases in a given dataset [4]. Transaction data consist of more than 300 features. It is almost impossible to use two vectors to fully distinguish the clusters for fraud and non-fraud cases. Our goal is to see if the patterns of the fraud and non-fraud clusters show different shapes after MDS, where they are projected onto the first two principles components.
+Multidimensional scaling (MDS) is often applied to visualize the level of similarity between cases in a given dataset [4]. Transaction data consist of more than 300 features. It is almost impossible to use two vectors to fully distinguish the clusters for fraud and non-fraud cases. Our goal is to see if the patterns of the fraud and non-fraud clusters show different shapes after MDS, where they are projected onto the first two principle components.
 </p>
 
 ![Img](/assets/img/MDS_notfraud.png)
@@ -102,7 +102,7 @@ Fig. 7. MDS embedding on transaction features.
 
 <br>
 <p>
-In Fig. 6, We observe that the two clusters show very different shapes. The distribution of non-fraud cluster is circular, surrounding the the (0,0} point, while the fraud cluster concentrates at (0,0), the lower-right corner. It is noted that the transaction dataset is a reduced form with the 40000 data points.
+In Fig. 6, We observe that the two clusters show very different shapes. The distribution of non-fraud cluster is circular, surrounding the (0,0} point, while the fraud cluster concentrates at (0,0), the lower-right corner. It is noted that the transaction dataset is a reduced form with the 40000 data points.
 </p>
 
 <b>6. Spectral embedding on Transaction Features </b>
