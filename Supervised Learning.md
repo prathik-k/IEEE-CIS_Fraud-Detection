@@ -155,7 +155,7 @@ LightGBM supports various hyper-parameters [4]. Table 2 lists some of the import
 <p style="text-align: justify;">
   <b>Approach and Results</b>
 </p>
- We attempted these supervised learning methods on two cases of data - 1) the preprocessed data following the previous steps, and 2) PCA implmeneted to this preprocessed data. Moreover, the SMOTE oversampled data was used for the logistic regression case to obtain a more balanced training set.. After training each model, we let the model produce prediction of the test data and recorded their score through kaggle submission. The hyper-parameters were manually and lightly tuned with Grid Search and 5-fold cross validation to obtain moderate test scores. To plot the ROC curves, a hard train-validation split was performed on to yield an 80-20 split. Table 2 shows the final results after we evaluated the models when trained on the complete set of training data.
+ We attempted these supervised learning methods on two cases of data - 1) the preprocessed data following the previous steps, and 2) PCA implemented to this preprocessed data. Moreover, the SMOTE oversampled data was used for the logistic regression case to obtain a more balanced training set. After training each model, we generated model prediction and evaluated its performance by submitting it on Kaggle. The hyper-parameters were manually and lightly tuned with grid search and 5-fold cross validation to obtain moderate test scores. To plot the ROC curves, a hard train-validation split was performed on to yield an 80-20 split. Table 2 shows the final results after we evaluated the models when trained on the complete set of training data.
  
 <table style="width:100%">
   <tr>
