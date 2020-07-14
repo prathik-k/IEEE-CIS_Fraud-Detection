@@ -42,13 +42,26 @@ Fig. 1. The sigmoid curve. Note that the classification procedure yields a proba
 <p style="text-align: justify;">
   <b>2. Random Forest Classification</b>
 </p>
-Random forest is a classical tree-based ensemble learning method that constructs multiple individual decision trees in order to evaluate a class assignment of a data point. The prediction is made at the end of the multiple trees, by majority voting of their results. As in traditional decision trees, an information criterion is used to make splits in a tree. In our implementation, we used the Gini impurity criterion. A critical difference between Random Forest and the traditional decision tree algorithm is that only certain features are made available to each particular tree while determining split locations (which differentiates it from Bagging) and that each tree has access to only a random subset of data. This regularizes against overfitting, which is a common problem for decision tree methods. The important hyperparameters of the random forest models are:
-<ul>
-    <li>Max depth: The maximum depth of each individual tree. </li>
-    <li>num_estimators: The number of trees in the random forest </li>
-    <li> max_features: The maximum number of selected features that each tree can utilize. </li>
-</ul>
-
+Random forest is a classical tree-based ensemble learning method that constructs multiple individual decision trees in order to evaluate a class assignment of a data point. The prediction is made at the end of the multiple trees, by majority voting of their results. As in traditional decision trees, an information criterion is used to make splits in a tree. In our implementation, we used the Gini impurity criterion. A critical difference between Random Forest and the traditional decision tree algorithm is that only certain features are made available to each particular tree while determining split locations (which differentiates it from Bagging) and that each tree has access to only a random subset of data. This regularizes against overfitting, which is a common problem for decision tree methods. The important hyperparameters of the random forest models are shown in the table below:
+<table style="width:100%">
+  <tr>
+    <th>Parameter Name</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>Max depth:</td>
+    <td>The maximum depth of each individual tree</td>
+  </tr>
+  <tr>
+    <td>num_estimators</td>
+    <td>The number of trees in the random forest</td>
+  </tr>
+  <tr>
+    <td>max_features</td>
+    <td>The maximum number of selected features that each tree can utilize</td>
+  </tr>
+</table>
+<center>Table 1: Random Forest classifier hyper-parameters</center>
 <p style="text-align: justify;">
   <b>3. XGBoost Classifier</b>
 </p>
@@ -90,7 +103,7 @@ Also, among the hyper-parameters XGBoost uses[3], we considered the following pa
     <td>Cost penalty for a prediction. We chose the area under the curve metric</td>
   </tr>
 </table>
-<center>Table 1: XGBoost Hyper-parameters</center>
+<center>Table 2: XGBoost hyper-parameters</center>
 
 
 <p style="text-align: justify;">
@@ -137,7 +150,7 @@ LightGBM supports various hyper-parameters [4]. Table 2 lists some of the import
     <td>Cost penalty for a prediction. We chose the area under the curve metric</td>
   </tr>
 </table>
-<center>Table 2: LightGBM Hyper-parameters</center>
+<center>Table 2: LightGBM hyper-parameters</center>
 
 <p style="text-align: justify;">
   <b>Approach and Results</b>
