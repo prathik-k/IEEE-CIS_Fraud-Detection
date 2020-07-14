@@ -116,6 +116,7 @@ From the above figure, we see that the two clusters show similar shapes on the f
 
 <b>7. 3D Visualization of PCA </b>
 <br>
+<p>
 Although the first few components of the PCA transformation do not account for a large portion of variation, we are still interested in how good the first three components are able to separate the two clusters.
 </p>
 
