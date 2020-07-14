@@ -94,7 +94,7 @@ Multidimensional scaling (MDS) is often applied to visualize the level of simila
 
 ![Img](/assets/img/MDS_notfraud.png)
 
-![Img](/assets/img/MDS_fraud.png)
+![Img](/assets/img/MDS_fraud_new.png)
 
 <center>
 Fig. 7. MDS embedding on transaction features. 
@@ -102,7 +102,7 @@ Fig. 7. MDS embedding on transaction features.
 
 <br>
 <p>
-In Fig. 6, We observe that the two clusters show very different shapes. The distribution of non-fraud cluster is circular, surrounding the the (0,0} point, while the fraud cluster concentrates at (0,0), the lower-right corner. It is noted that the transaction dataset is a reduced form with the first 20000 data points.
+In Fig. 6, We observe that the two clusters show very different shapes. The distribution of non-fraud cluster is circular, surrounding the the (0,0} point, while the fraud cluster concentrates at (0,0), the lower-right corner. It is noted that the transaction dataset is a reduced form with the 40000 data points.
 </p>
 
 <b>6. Spectral embedding on Transaction Features </b>
