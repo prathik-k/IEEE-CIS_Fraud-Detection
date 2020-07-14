@@ -135,3 +135,5 @@ From the above figure, we see that the two clusters show similar shapes on the f
 [3] Borg, Ingwer, and Patrick JF Groenen. Modern multidimensional scaling: Theory and applications. Springer Science & Business Media, 2005.
 
 [4] Zare, Habil, et al. "Data reduction for spectral clustering to analyze high throughput flow cytometry data." BMC bioinformatics 11.1 (2010): 403.
+
+[5] van der Maaten, L.J.P.; Hinton, G.E. Visualizing High-Dimensional Data Using t-SNE. Journal of Machine Learning Research 9:2579-2605, 2008
