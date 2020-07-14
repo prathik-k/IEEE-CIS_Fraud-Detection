@@ -114,7 +114,7 @@ There are two separate categories of data in the data: the id and transaction da
 
 </p>
 
-![Img](/assets/img/Fraudulent_genuine.PNG)
+![Img](/assets/img/isfraud.png)
 
 <center>
 Figure 1. Disparity between fraudulent and genuine data

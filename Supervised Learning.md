@@ -178,9 +178,12 @@ LightGBM supports various hyper-parameters [3]. Table 1 lists some of the import
 <p style="text-align: justify;">
 <b>References</b>
 <br>
+
 [1] http://stat.cmu.edu/~cshalizi/uADA/12/lectures/ch12.pdf <br>
+
 [2] Tianqi Chen and Carlos Guestrin. Xgboost: A scalable tree boosting system. In Proceedings of the 22Nd ACM SIGKDD International
 Conference on Knowledge Discovery and Data Mining, pages 785–794. ACM, 2016. <br>
+
 [3]  LightGBM Docs, URL: https://lightgbm.readthedocs.io/en/latest/Parameters.html
 </p>
 <p style="text-align: justify;">
