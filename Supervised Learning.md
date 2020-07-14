@@ -39,7 +39,11 @@ where $\beta_{0}$ and $\beta_{1}$ are constants that need to be computed [1]. Th
 </p>
 ![Img](/assets/img/sigmoid.png) 
 <br>
+
+<center>
 Fig. 1. The sigmoid curve. Note that the classification procedure yields a probability between 0 and 1.
+</center>
+
 
 <p style="text-align: justify;">
   <b>2. Random Forest Classification</b>
@@ -70,7 +74,7 @@ LightGBM is another gradient boosting tree based supervised learning method. Lig
 <li>Reduce memory usage</li>
 <li>Reduce communication cost for parallel learning</li>
 </ul>
-LightGBM supports various hyper-parameters. Table 1 lists some of the important ones and the values we used:
+LightGBM supports various hyper-parameters [2]. Table 1 lists some of the important ones and the values we used:
 <table style="width:100%">
   <tr>
     <th>Parameter Name</th>
@@ -180,4 +184,6 @@ LightGBM supports various hyper-parameters. Table 1 lists some of the important 
 [1] http://stat.cmu.edu/~cshalizi/uADA/12/lectures/ch12.pdf
 [2] Tianqi Chen and Carlos Guestrin. Xgboost: A scalable tree boosting system. In Proceedings of the 22Nd ACM SIGKDD International
 Conference on Knowledge Discovery and Data Mining, pages 785–794. ACM, 2016.
+
+[2] LightGBM Docs, URL: https://lightgbm.readthedocs.io/en/latest/Parameters.html
 
