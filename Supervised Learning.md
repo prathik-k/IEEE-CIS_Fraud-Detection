@@ -183,11 +183,3 @@ LightGBM supports various hyper-parameters [3]. Table 1 lists some of the import
 Conference on Knowledge Discovery and Data Mining, pages 785–794. ACM, 2016. <br>
 [3]  LightGBM Docs, URL: https://lightgbm.readthedocs.io/en/latest/Parameters.html
 </p>
-<p style="text-align: justify;">
-    <b>Contributions:</b> <br>
-    Divyanshu Upreti: Data preprocessing, unsupervised learning, supervised learning, report writing <br>
-    Jamin Seo: Supervised learning, report writing <br>
-    Jim Liu: Data preprocessing, unsupervised learning, report writing <br>
-    Prathik Kaundinya: Data preprocessing, unsupervised learning, supervised learning, report writing <br>
-    Yuan Chun-Lo: Unsupervised learning, report writing <br>
- </p>
