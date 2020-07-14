@@ -35,20 +35,33 @@ Logistic regression is a binary classification algorithm that is used to model t
 $$p(X) = \frac{e^{\beta_{0}+\beta_{1}X}}{1+e^{\beta_{0}+\beta_{1}X}}$$
 
 where $\beta_{0}$ and $\beta_{1}$ are constants that need to be computed [1]. This function is also referred to as the sigmoid function - a sample plot of the sigmoid function is shown in Fig. 1. In this project, the standard logistic regression model was used along with SMOTE oversampling which is described in the previous section.
+</p>
 ![Img](/assets/img/sigmoid.png) 
 <br>
-Fig. 1. The sigmoid curve. Note that the classification procedure yields a probability between 0 and 1.
-</p>
+<center>Fig. 1. The sigmoid curve. Note that the classification procedure yields a probability between 0 and 1.</center>
 <p style="text-align: justify;">
   <b>2. Random Forest Classification</b>
 </p>
-Random forest is a classical tree-based ensemble learning method that constructs multiple individual decision trees in order to evaluate a class assignment of a data point. The prediction is made at the end of the multiple trees, by majority voting of their results. As in traditional decision trees, an information criterion is used to make splits in a tree. In our implementation, we used the Gini impurity criterion. A critical difference between Random Forest and the traditional decision tree algorithm is that only certain features are made available to each particular tree while determining split locations (which differentiates it from Bagging) and that each tree has access to only a random subset of data. This regularizes against overfitting, which is a common problem for decision tree methods. The important hyperparameters of the random forest models are:
-<ul>
-    <li>Max depth: The maximum depth of each individual tree. </li>
-    <li>num_estimators: The number of trees in the random forest </li>
-    <li> max_features: The maximum number of selected features that each tree can utilize. </li>
-</ul>
-
+Random forest is a classical tree-based ensemble learning method that constructs multiple individual decision trees in order to evaluate a class assignment of a data point. The prediction is made at the end of the multiple trees, by majority voting of their results. As in traditional decision trees, an information criterion is used to make splits in a tree. In our implementation, we used the Gini impurity criterion. A critical difference between Random Forest and the traditional decision tree algorithm is that only certain features are made available to each particular tree while determining split locations (which differentiates it from Bagging) and that each tree has access to only a random subset of data. This regularizes against overfitting, which is a common problem for decision tree methods. The important hyperparameters of the random forest models are shown in the table below:
+<table style="width:100%">
+  <tr>
+    <th>Parameter Name</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>Max depth:</td>
+    <td>The maximum depth of each individual tree</td>
+  </tr>
+  <tr>
+    <td>num_estimators</td>
+    <td>The number of trees in the random forest</td>
+  </tr>
+  <tr>
+    <td>max_features</td>
+    <td>The maximum number of selected features that each tree can utilize</td>
+  </tr>
+</table>
+<center>Table 1: Random Forest classifier hyper-parameters</center>
 <p style="text-align: justify;">
   <b>3. XGBoost Classifier</b>
 </p>
@@ -90,7 +103,7 @@ Also, among the hyper-parameters XGBoost uses[3], we considered the following pa
     <td>Cost penalty for a prediction. We chose the area under the curve metric</td>
   </tr>
 </table>
-<center>Table 1: XGBoost Hyper-parameters</center>
+<center>Table 2: XGBoost hyper-parameters</center>
 
 
 <p style="text-align: justify;">
@@ -137,12 +150,12 @@ LightGBM supports various hyper-parameters [4]. Table 2 lists some of the import
     <td>Cost penalty for a prediction. We chose the area under the curve metric</td>
   </tr>
 </table>
-<center>Table 2: LightGBM Hyper-parameters</center>
+<center>Table 2: LightGBM hyper-parameters</center>
 
 <p style="text-align: justify;">
   <b>Approach and Results</b>
 </p>
- We attempted these supervised learning methods on two cases of data - 1) the preprocessed data following the previous steps, and 2) PCA implmeneted to this preprocessed data. Moreover, the SMOTE oversampled data was used for the logistic regression case to obtain a more balanced training set.. After training each model, we let the model produce prediction of the test data and recorded their score through kaggle submission. The hyper-parameters were manually and lightly tuned with Grid Search and 5-fold cross validation to obtain moderate test scores. To plot the ROC curves, a hard train-validation split was performed on to yield an 80-20 split. Table 2 shows the final results after we evaluated the models when trained on the complete set of training data.
+ We attempted these supervised learning methods on two cases of data - 1) the preprocessed data following the previous steps, and 2) PCA implemented to this preprocessed data. Moreover, the SMOTE oversampled data was used for the logistic regression case to obtain a more balanced training set. After training each model, we generated model prediction and evaluated its performance by submitting it on Kaggle. The hyper-parameters were manually and lightly tuned with grid search and 5-fold cross validation to obtain moderate test scores. To plot the ROC curves, a hard train-validation split was performed on to yield an 80-20 split. Table 2 shows the final results after we evaluated the models when trained on the complete set of training data.
  
 <table style="width:100%">
   <tr>
@@ -210,7 +223,9 @@ LightGBM supports various hyper-parameters [4]. Table 2 lists some of the import
 <p style="text-align: justify;">
 <b>References</b>
 <br>
+
 [1] http://stat.cmu.edu/~cshalizi/uADA/12/lectures/ch12.pdf <br>
+
 [2] Tianqi Chen and Carlos Guestrin. Xgboost: A scalable tree boosting system. In Proceedings of the 22Nd ACM SIGKDD International
 Conference on Knowledge Discovery and Data Mining, pages 785–794. ACM, 2016. <br>
 [3]  XGBoost Docs, https://xgboost.readthedocs.io/en/latest/parameter.html<br>

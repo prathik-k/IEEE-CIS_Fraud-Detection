@@ -11,7 +11,7 @@ The unsupervised learning section for this project is an extension of the data p
 <p style="text-align: justify;">
   <b>1. Reduction of the number of components in transaction data with correlation metrics</b>
   <br>
-Our preliminary Exploratory Data Analysis (EDA) indicated a potential way of clustering columns in the transaction dataset by matching the row with missing information (NaN). It appeared that certain columns contained uniform amounts of missing data; these rows were further found to be matching amongst all the columns within the same data cluster. The results of this clustering (based on number of NaNs found in the column) is shown in Fig. 1.
+Our preliminary Exploratory Data Analysis (EDA) indicated a potential way of clustering columns in the transaction dataset by matching the row with missing information (NaN). It appeared that certain columns contained uniform amounts of missing data; these rows were further found to be matching amongst all the columns within the same data cluster. The result of this clustering (based on the number of NaNs found in the column) is shown in Fig. 1.
 </p>
 
 ![Img](/assets/img/piechart_V_corr_red.JPG)
@@ -57,20 +57,20 @@ Fig. 4. 3D visualization of PCA.
 
 <p style="text-align: justify;">
 
-<b>3. SMOTE Oversampling of the dataset to overcome imbalance</b>
+<b>3. SMOTE Oversampling of the dataset to overcome the imbalance</b>
 <br>
-Since most of the supervised learning methods we used were tree-based, they performed well on the classification task in spite of the huge discrepancy in quantity of data for the genuine and fraudulent categories. However, we attempted to compare our methods with another form of classification (logistic regression) to ascertain the effectiveness of alternative methods. To prepare the data for this, we decided to use SMOTE (Synthetic Minority Oversampling TEchnique) followed by random undersampling of the genuine data. SMOTE draws a line between random points (that are amongst k-Nearest Neighbors of each other) in the minority class in the high dimensinal space, and artificially synthesizes data points along this line. After applying SMOTE to the minority class to achieve a class ratio of 0.2, we used random undersampling on the genuine data to reduce the number of datapoints to the original number. We recognize that this undersampling could involve discarding some useful data points; however, it was necessary to make the dataset less unwieldy and run the logistic regression in a computationally efficient way. Fig. 5. illustrates the SMOTE procedure for a lower-dimensional case; the same concept may be extended to the higher dimensional case.
+Since most of the supervised learning methods we used were tree-based, they performed well on the classification task in spite of the huge discrepancy in quantity of data for the genuine and fraudulent categories. However, we attempted to compare our methods with another form of classification (logistic regression) to ascertain the effectiveness of alternative methods. To prepare the data for this, we decided to use SMOTE (Synthetic Minority Oversampling TEchnique) [2] followed by random undersampling of the genuine data. SMOTE draws a line between random points (that are amongst k-Nearest Neighbors of each other) in the minority class in the high dimensinal space, and artificially synthesizes data points along this line. After applying SMOTE to the minority class to achieve a class ratio of 0.2, we used random undersampling on the genuine data to reduce the number of datapoints to the original number. We recognize that this undersampling could involve discarding some useful data points; however, it was necessary to make the dataset less unwieldy and run the logistic regression in a computationally efficient way. Fig. 5. illustrates the SMOTE procedure for a lower-dimensional case; the same concept may be extended to the higher dimensional case.
 </p>
 
 ![Img](/assets/img/SMOTE_sample.jpg)
 
 <center>
-Fig. 5. SMOTE on a low-dimensional dataset. [2]
+Fig. 5. SMOTE on a low-dimensional dataset. 
 </center>
 
 <b>4. t-SNE on Time Features</b>
 <br>
-T-distributed stochastic neighbor embedding (t-SNE) is a method to visualize high-dimensional data. Time features are D columns and there are 14 features which is hard to understand their relationship between Fraud and NotFraud classes. Therefore, our team utilized TSNE to better understand low dimensional data representation. What's more, our team would like to know whether to find two clusters seperating two classes easily.
+T-distributed stochastic neighbor embedding (t-SNE) [3] is a method to visualize high-dimensional data. Time features are D columns and there are 14 features which is hard to understand their relationship between Fraud and NotFraud classes. Therefore, our team utilized TSNE to better understand low dimensional data representation. What's more, our team would like to know whether to find two clusters seperating two classes easily.
 </p>
 
 ![Img](/assets/img/TSNENotFraud.png)
@@ -89,7 +89,7 @@ Based on two figures above, the two classes are not easily seperated, but the is
 <b>5. MDS Embedding on Transaction Features</b>
 <br>
 <p>
-Multidimensional scaling (MDS) is often applied to visualize the level of similarity between cases in a given dataset [3]. Transaction data consist of more than 300 features. It is almost impossible to use two vectors to fully distinguish the clusters for fraud and non-fraud cases. Our goal is to see if the patterns of the fraud and non-fraud clusters show different shapes after MDS, where they are projected onto the first two principles components.
+Multidimensional scaling (MDS) is often applied to visualize the level of similarity between cases in a given dataset [4]. Transaction data consist of more than 300 features. It is almost impossible to use two vectors to fully distinguish the clusters for fraud and non-fraud cases. Our goal is to see if the patterns of the fraud and non-fraud clusters show different shapes after MDS, where they are projected onto the first two principle components.
 </p>
 
 ![Img](/assets/img/MDS_notfraud.png)
@@ -102,13 +102,13 @@ Fig. 7. MDS embedding on transaction features.
 
 <br>
 <p>
-In Fig. 6, We observe that the two clusters show very different shapes. The distribution of non-fraud cluster is circular, surrounding the the (0,0} point, while the fraud cluster concentrates at (0,0), the lower-right corner. It is noted that the transaction dataset is a reduced form with the 40000 data points.
+In Fig. 6, We observe that the two clusters show very different shapes. The distribution of non-fraud cluster is circular, surrounding the (0,0} point, while the fraud cluster concentrates near (0,0). It is noted that the transaction dataset is a reduced form with 40000 data points.
 </p>
 
 <b>6. Spectral embedding on Transaction Features </b>
 <br>
 <p>
-Spectral embedding is for non-linear dimensionality reduction [4]. It forms a specified function and applies spectral decomposition to the corresponding graph laplacian. The resultant values are the eigenvectors for each data point.
+Spectral embedding is for non-linear dimensionality reduction [5]. It forms a specified function and applies spectral decomposition to the corresponding graph laplacian. The resultant values are the eigenvectors for each data point.
 </p>
 
 ![Img](/assets/img/spectral_embedding_notfraud.png)
@@ -130,8 +130,11 @@ From the above figure, we see that the two clusters show similar shapes on the f
 
 [1] https://www.kaggle.com/cdeotte/eda-for-columns-v-and-id
 
-[2] https://rikunert.com/SMOTE_explained
+[2] Nitesh V. Chawla, Kevin W. Bowyer, Lawrence O. Hall, and W. Philip Kegelmeyer. 2002. SMOTE: synthetic minority over-sampling technique. J. Artif. Int. Res. 16, 1 (January 2002), 321–357.
 
-[3] Borg, Ingwer, and Patrick JF Groenen. Modern multidimensional scaling: Theory and applications. Springer Science & Business Media, 2005.
+[3] van der Maaten, L.J.P.; Hinton, G.E. Visualizing High-Dimensional Data Using t-SNE. Journal of Machine Learning Research 9:2579-2605, 2008
 
-[4] Zare, Habil, et al. "Data reduction for spectral clustering to analyze high throughput flow cytometry data." BMC bioinformatics 11.1 (2010): 403.
+[4] Borg, Ingwer, and Patrick JF Groenen. Modern multidimensional scaling: Theory and applications. Springer Science & Business Media, 2005.
+
+[5] Zare, Habil, et al. "Data reduction for spectral clustering to analyze high throughput flow cytometry data." BMC bioinformatics 11.1 (2010): 403.
+
