@@ -102,7 +102,7 @@ Fig. 7. MDS embedding on transaction features.
 
 <br>
 <p>
-In Fig. 6, We observe that the two clusters show very different shapes. The distribution of non-fraud cluster is circular, surrounding the (0,0} point, while the fraud cluster concentrates at (0,0), the lower-right corner. It is noted that the transaction dataset is a reduced form with the 40000 data points.
+In Fig. 6, We observe that the two clusters show very different shapes. The distribution of non-fraud cluster is circular, surrounding the (0,0} point, while the fraud cluster concentrates near (0,0). It is noted that the transaction dataset is a reduced form with 40000 data points.
 </p>
 
 <b>6. Spectral embedding on Transaction Features </b>
