@@ -13,7 +13,6 @@ subtitle: Dataset description
 There are two separate categories of data in the data: the id and transaction datasets. The ID dataset consists of identification information (such as the device on which the purchase was made, Operating System used, etc.), while the transaction dataset consists of the information directly tied to the transaction (such as the type of credit card used, billing address, transaction amount, etc.). Each of these additionally have train and test versions respectively. An interesting aspect to this dataset is the presence of certain abstract engineered features. A detailed overview of the features found in each table is shown below:
 </p>
 
-Table 1: Overview of the ID dataset
 
 <table style="width:100%">
   <tr>
@@ -38,7 +37,8 @@ Table 1: Overview of the ID dataset
   </tr>
 </table>
 
-Table 2: Overview of the Transaction dataset
+<center>Table 1: Overview of the ID dataset</center><br>
+
 
 <table style="width:100%">
   <tr>
@@ -104,6 +104,8 @@ Table 2: Overview of the Transaction dataset
   
 </table>
 
+<center>Table 2: Overview of the Transaction dataset</center>
+
 <p style="text-align: justify;">
  <b>Class Imbalance</b>
  <br>
@@ -115,7 +117,7 @@ Table 2: Overview of the Transaction dataset
 ![Img](/assets/img/Fraudulent_genuine.PNG)
 
 <center>
-Fig. 1. Disparity between fraudulent and genuine data
+Figure 1. Disparity between fraudulent and genuine data
 </center>
 
 <p style="text-align: justify;">
