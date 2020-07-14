@@ -38,8 +38,7 @@ where $\beta_{0}$ and $\beta_{1}$ are constants that need to be computed [1]. Th
 </p>
 ![Img](/assets/img/sigmoid.png) 
 <br>
-Fig. 1. The sigmoid curve. Note that the classification procedure yields a probability between 0 and 1.
-</p>
+<center>Fig. 1. The sigmoid curve. Note that the classification procedure yields a probability between 0 and 1.</center>
 <p style="text-align: justify;">
   <b>2. Random Forest Classification</b>
 </p>
