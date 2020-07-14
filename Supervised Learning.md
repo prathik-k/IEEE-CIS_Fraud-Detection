@@ -31,7 +31,6 @@ For this project, we attempted a variety of supervised classification methods th
 
 <p style="text-align: justify;">
   <b>1. Logistic Model</b>
-
 Logistic regression is a binary classification algorithm that is used to model the probability of a data point belonging to a class. The equation for logistic regression that models this probability is given by: <br>
 $$p(X) = \frac{e^{\beta_{0}+\beta_{1}X}}{1+e^{\beta_{0}+\beta_{1}X}}$$
 
@@ -39,18 +38,30 @@ where $\beta_{0}$ and $\beta_{1}$ are constants that need to be computed [1]. Th
 </p>
 ![Img](/assets/img/sigmoid.png) 
 <br>
-Fig. 1. The sigmoid curve. Note that the classification procedure yields a probability between 0 and 1.
-
+<center>Fig. 1. The sigmoid curve. Note that the classification procedure yields a probability between 0 and 1.</center>
 <p style="text-align: justify;">
   <b>2. Random Forest Classification</b>
 </p>
-Random forest is a classical tree-based ensemble learning method that constructs multiple individual decision trees in order to evaluate a class assignment of a data point. The prediction is made at the end of the multiple trees, by majority voting of their results. As in traditional decision trees, an information criterion is used to make splits in a tree. In our implementation, we used the Gini impurity criterion. A critical difference between Random Forest and the traditional decision tree algorithm is that only certain features are made available to each particular tree while determining split locations (which differentiates it from Bagging) and that each tree has access to only a random subset of data. This regularizes against overfitting, which is a common problem for decision tree methods. The important hyperparameters of the random forest models are:
-<ul>
-    <li>Max depth: The maximum depth of each individual tree. </li>
-    <li>num_estimators: The number of trees in the random forest </li>
-    <li> max_features: The maximum number of selected features that each tree can utilize. </li>
-</ul>
-
+Random forest is a classical tree-based ensemble learning method that constructs multiple individual decision trees in order to evaluate a class assignment of a data point. The prediction is made at the end of the multiple trees, by majority voting of their results. As in traditional decision trees, an information criterion is used to make splits in a tree. In our implementation, we used the Gini impurity criterion. A critical difference between Random Forest and the traditional decision tree algorithm is that only certain features are made available to each particular tree while determining split locations (which differentiates it from Bagging) and that each tree has access to only a random subset of data. This regularizes against overfitting, which is a common problem for decision tree methods. The important hyperparameters of the random forest models are shown in the table below:
+<table style="width:100%">
+  <tr>
+    <th>Parameter Name</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>Max depth:</td>
+    <td>The maximum depth of each individual tree</td>
+  </tr>
+  <tr>
+    <td>num_estimators</td>
+    <td>The number of trees in the random forest</td>
+  </tr>
+  <tr>
+    <td>max_features</td>
+    <td>The maximum number of selected features that each tree can utilize</td>
+  </tr>
+</table>
+<center>Table 1: Random Forest classifier hyper-parameters</center>
 <p style="text-align: justify;">
   <b>3. XGBoost Classifier</b>
 </p>
@@ -61,6 +72,40 @@ XGBoost is a tree-based ensemble learning framework that implements gradient boo
 <li>out-of-core computation to effectively process data</li>
 </ul>
 
+Also, among the hyper-parameters XGBoost uses[3], we considered the following parameters to train our model.
+<table style="width:100%">
+  <tr>
+    <th>Parameter Name</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>objective</td>
+    <td>'binary:logistic' was chosed to handle this classification problem</td>
+  </tr>
+  <tr>
+    <td>max_depth</td>
+    <td>Maximum depth of a tree, which controls complexity and overfitting</td>
+  </tr>
+  <tr>
+    <td>subsample</td>
+    <td>Subsample ratio of the training instance, occuring once in every boosting iteration</td>
+  </tr>
+  <tr>
+    <td>colsample_bytree</td>
+    <td>Subsample ratio of columns when constructing each tree</td>
+  </tr>
+  <tr>
+    <td>tree_method</td>
+    <td>Tree construction algorithm. We used 'hist', a faster histogram optimized approximate greedy algorithm. </td>
+  </tr>
+  <tr>
+    <td>metric</td>
+    <td>Cost penalty for a prediction. We chose the area under the curve metric</td>
+  </tr>
+</table>
+<center>Table 2: XGBoost hyper-parameters</center>
+
+
 <p style="text-align: justify;">
   <b>4. LightGBM Classifier</b>
 </p>
@@ -70,7 +115,7 @@ LightGBM is another gradient boosting tree based supervised learning method. Lig
 <li>Reduce memory usage</li>
 <li>Reduce communication cost for parallel learning</li>
 </ul>
-LightGBM supports various hyper-parameters [3]. Table 1 lists some of the important ones and the values we used:
+LightGBM supports various hyper-parameters [4]. Table 2 lists some of the important ones and the values we used:
 <table style="width:100%">
   <tr>
     <th>Parameter Name</th>
@@ -105,12 +150,12 @@ LightGBM supports various hyper-parameters [3]. Table 1 lists some of the import
     <td>Cost penalty for a prediction. We chose the area under the curve metric</td>
   </tr>
 </table>
-<center>Table 1: LightGBM Hyper-parameters</center>
+<center>Table 2: LightGBM hyper-parameters</center>
 
 <p style="text-align: justify;">
   <b>Approach and Results</b>
 </p>
- We attempted these supervised learning methods on two cases of data - 1) the preprocessed data following the previous steps, and 2) PCA implmeneted to this preprocessed data. Moreover, the SMOTE oversampled data was used for the logistic regression case to obtain a more balanced training set.. After training each model, we let the model produce prediction of the test data and recorded their score through kaggle submission. The hyper-parameters were manually and lightly tuned with Grid Search and 5-fold cross validation to obtain moderate test scores. To plot the ROC curves, a hard train-validation split was performed on to yield an 80-20 split. Table 2 shows the final results after we evaluated the models when trained on the complete set of training data.
+ We attempted these supervised learning methods on two cases of data - 1) the preprocessed data following the previous steps, and 2) PCA implemented to this preprocessed data. Moreover, the SMOTE oversampled data was used for the logistic regression case to obtain a more balanced training set. After training each model, we generated model prediction and evaluated its performance by submitting it on Kaggle. The hyper-parameters were manually and lightly tuned with grid search and 5-fold cross validation to obtain moderate test scores. To plot the ROC curves, a hard train-validation split was performed on to yield an 80-20 split. Table 2 shows the final results after we evaluated the models when trained on the complete set of training data.
  
 <table style="width:100%">
   <tr>
@@ -161,7 +206,7 @@ LightGBM supports various hyper-parameters [3]. Table 1 lists some of the import
   </tr>
 </table>
 
-<center>Table 2: Result from each model</center>
+<center>Table 3: Result from each model</center>
 
 <p style="text-align: justify;">
   <b>AUC-ROC curves</b>
@@ -183,14 +228,6 @@ LightGBM supports various hyper-parameters [3]. Table 1 lists some of the import
 
 [2] Tianqi Chen and Carlos Guestrin. Xgboost: A scalable tree boosting system. In Proceedings of the 22Nd ACM SIGKDD International
 Conference on Knowledge Discovery and Data Mining, pages 785–794. ACM, 2016. <br>
-
-[3]  LightGBM Docs, URL: https://lightgbm.readthedocs.io/en/latest/Parameters.html
+[3]  XGBoost Docs, https://xgboost.readthedocs.io/en/latest/parameter.html<br>
+[4]  LightGBM Docs, URL: https://lightgbm.readthedocs.io/en/latest/Parameters.html
 </p>
-<p style="text-align: justify;">
-    <b>Contributions:</b> <br>
-    Divyanshu Upreti: Data preprocessing, unsupervised learning, supervised learning, report writing <br>
-    Jamin Seo: Supervised learning, report writing <br>
-    Jim Liu: Data preprocessing, unsupervised learning, report writing <br>
-    Prathik Kaundinya: Data preprocessing, unsupervised learning, supervised learning, report writing <br>
-    Yuan Chun-Lo: Unsupervised learning, report writing <br>
- </p>

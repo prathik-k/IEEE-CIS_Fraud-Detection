@@ -22,4 +22,14 @@ Overall, we achieved good performance with our tree-based models. Out of the thr
     <li>Providing fast results. Typical fraud detection models have to detect fraud within microseconds (by assigning a probability of belonging to either class). Our LightGBM model also excels at this; the prediction on the test dataset is performed in under 25 microseconds. </li>
   </ul>
   As such, we believe our model is fairly well suited for the application of credit card fraud detection. Moreover, after submitting our best result (the LightGBM model) to the Kaggle, we obtained an AUC-ROC of 0.92 - this would place us in the top 100 performances in the contest if it were still running. 
-</p>      
+</p>     
+
+<p style="text-align: justify;">
+    <b>Contributions:</b> <br>
+    Divyanshu Upreti: Data preprocessing, unsupervised learning, supervised learning, report writing <br>
+    Jamin Seo: Supervised learning, report writing <br>
+    Chen-Yang Liu: Data preprocessing, unsupervised learning, report writing <br>
+    Prathik Kaundinya: Data preprocessing, unsupervised learning, supervised learning, report writing <br>
+    Yuan Chun-Lo: Unsupervised learning, report writing <br>
+ </p>
+
