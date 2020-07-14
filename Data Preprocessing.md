@@ -24,11 +24,11 @@ Another example of this is Cards columns. Figure 1 shows that data. We have colu
 
 <center>Figure 1: Card data is a mixture of Numerical and Categorical data</center>
 
-**3. Feature Enginnering**  
+**3. Feature Engineering**  
 <p style="text-align: justify;">
 &nbsp;&nbsp; We need to parse some of the categorical features and create one or features from them. For e.g, the 'id_30' column has operating system information. We parse the column for words such as 'Mac', 'iOS' etc and create an new column. Similarly the 'DeviceInfo' (Figure 2) column has string values that contain device name and version. We parse them for values like 'SAMSUNG', 'MOTO' etc and create two new feature for device name and version. Similarly, we parse for browser name, version, screen width, height etc.
 
-For emails we parse sender and receiver emails and bin them into domain name like google and suffix like 'org'
+For emails we parse sender and receiver emails and bin them into domain name like 'google' and suffix like '.org' or '.com'.
 </p>
 
 ![Img](/assets/img/DeviceInfo-distribution.png)
