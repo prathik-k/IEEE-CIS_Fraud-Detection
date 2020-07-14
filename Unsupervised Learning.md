@@ -89,7 +89,7 @@ Based on two figures above, the two classes are not easily seperated, but the is
 <b>5. MDS Embedding on Transaction Features</b>
 <br>
 <p>
-Multidimensional scaling (MDS) is often applied to visualize the level of similarity between cases in a given dataset. Transaction data consist of more than 300 features. It is almost impossible to use two vectors to fully distinguish the clusters for fraud and non-fraud cases. Our goal is to see if the patterns of the fraud and non-fraud clusters show different shapes after MDS, where they are projected onto the first two principles components.
+Multidimensional scaling (MDS) is often applied to visualize the level of similarity between cases in a given dataset [3]. Transaction data consist of more than 300 features. It is almost impossible to use two vectors to fully distinguish the clusters for fraud and non-fraud cases. Our goal is to see if the patterns of the fraud and non-fraud clusters show different shapes after MDS, where they are projected onto the first two principles components.
 </p>
 
 ![Img](/assets/img/MDS_notfraud.png)
@@ -108,7 +108,7 @@ In Fig. 6, We observe that the two clusters show very different shapes. The dist
 <b>6. Spectral embedding on Transaction Features </b>
 <br>
 <p>
-Spectral embedding is for non-linear dimensionality reduction. It forms a specified function and applies spectral decomposition to the corresponding graph laplacian. The resultant values are the eigenvectors for each data point.
+Spectral embedding is for non-linear dimensionality reduction [4]. It forms a specified function and applies spectral decomposition to the corresponding graph laplacian. The resultant values are the eigenvectors for each data point.
 </p>
 
 ![Img](/assets/img/spectral_embedding_notfraud.png)
@@ -132,3 +132,6 @@ From the above figure, we see that the two clusters show similar shapes on the f
 
 [2] https://rikunert.com/SMOTE_explained
 
+[3] Borg, Ingwer, and Patrick JF Groenen. Modern multidimensional scaling: Theory and applications. Springer Science & Business Media, 2005.
+
+[4] Zare, Habil, et al. "Data reduction for spectral clustering to analyze high throughput flow cytometry data." BMC bioinformatics 11.1 (2010): 403.
